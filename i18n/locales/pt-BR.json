@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "title": "WSS IT — Software sob Medida, IA e Integrações",
+    "description": "Desenvolvimento de software sob medida, inteligência artificial, integrações de sistemas e engenharia de backend para empresas. Consultoria em tecnologia da informação.",
+    "ogTitle": "WSS IT — Software • AI • Integrations",
+    "ogDescription": "Transformamos desafios de negócio em software. Sistemas sob medida, IA, integrações e engenharia de software."
+  },
+  "nav": {
+    "solutions": "Soluções",
+    "services": "Serviços",
+    "expertise": "Expertise",
+    "about": "Sobre",
+    "contact": "Contato",
+    "quote": "Peça seu orçamento",
+    "skipToContent": "Pular para conteúdo"
+  },
+  "hero": {
+    "headline": "Transformamos desafios de negócio em software.",
+    "subheadline": "Sistemas sob medida, inteligência artificial, integrações e engenharia de software para empresas que precisam ir além de soluções prontas.",
+    "cta": "Peça seu orçamento",
+    "ctaSecondary": "Conheça nossas soluções"
+  },
+  "services": {
+    "sectionTitle": "O que podemos construir para você?",
+    "sectionSubtitle": "Cada projeto começa com a compreensão do problema. A tecnologia é o meio, não o fim.",
+    "viewAll": "Ver todos os serviços",
+    "cta": "Solicitar orçamento",
+    "items": {
+      "websites": {
+        "title": "Websites & Landing Pages",
+        "context": "Preciso apresentar minha empresa, produto ou serviço profissionalmente na internet.",
+        "description": "Sites institucionais, landing pages e páginas para campanhas, construídos para converter visitantes em oportunidades.",
+        "capabilities": ["Landing pages", "Sites institucionais", "Sites comerciais", "Formulários", "Geração de leads", "Analytics", "SEO", "Páginas para campanhas"]
+      },
+      "customSoftware": {
+        "title": "Software sob Medida",
+        "context": "Preciso de um sistema específico para o funcionamento do meu negócio.",
+        "description": "Dashboards, plataformas, SaaS e sistemas internos projetados para resolver o problema real da sua operação.",
+        "capabilities": ["Dashboards", "Sistemas administrativos", "SaaS", "Portais", "Plataformas B2B", "Backoffice", "Sistemas internos", "Ferramentas operacionais"]
+      },
+      "aiAutomation": {
+        "title": "IA & Automação",
+        "context": "Minha equipe perde tempo executando processos que poderiam ser automatizados.",
+        "description": "Automação inteligente com IA aplicada a processos reais: documentos, emails, classificação, extração de dados e relatórios.",
+        "capabilities": ["Automação com IA", "LLM", "AI agents", "Processamento de documentos", "Classificação", "Extração de informações", "Email automation", "Workflows", "Relatórios", "Integração IA + sistemas"]
+      },
+      "integration": {
+        "title": "Integração de Sistemas",
+        "context": "Preciso fazer diferentes sistemas conversarem.",
+        "description": "Conexão entre sistemas internos, APIs externas, plataformas financeiras e serviços de terceiros.",
+        "capabilities": ["REST APIs", "Webhooks", "XML", "JSON", "APIs de terceiros", "Sistemas legados", "APIs financeiras", "Sincronização de dados"]
+      },
+      "backend": {
+        "title": "Backend Engineering",
+        "context": "Precisamos de um backend robusto, confiável e sustentável.",
+        "description": "APIs, processamento assíncrono, filas e arquiteturas event-driven projetadas para escalar.",
+        "capabilities": ["Node.js", "TypeScript", "Java", "APIs", "Arquitetura", "Bancos de dados", "Jobs", "Filas", "Event-driven systems"]
+      },
+      "backendRescue": {
+        "title": "Backend Rescue",
+        "context": "Existe um problema crítico no sistema e a causa não está clara.",
+        "description": "Troubleshooting, debugging e resolução de problemas em sistemas existentes — bugs em produção, performance e integrações quebradas.",
+        "capabilities": ["Troubleshooting", "Bugs em produção", "Performance", "Debugging", "Integrações quebradas", "Dívida técnica", "Arquitetura", "Observabilidade"]
+      },
+      "consulting": {
+        "title": "Consultoria Técnica",
+        "context": "Precisamos de orientação técnica para tomar decisões seguras.",
+        "description": "Architecture review, code review, planejamento técnico e análise de sistemas para decisões mais informadas.",
+        "capabilities": ["Architecture review", "Code review", "Planejamento técnico", "Modernização", "Debugging", "Performance", "Decisões tecnológicas", "Análise de sistemas"]
+      }
+    }
+  },
+  "customSoftware": {
+    "sectionTitle": "Software que resolve o problema real.",
+    "sectionSubtitle": "Quando soluções prontas deixam de ser suficientes, construímos a tecnologia que o negócio realmente precisa.",
+    "items": ["Sistemas administrativos", "Plataformas internas", "SaaS", "Dashboards", "Portais", "Aplicações web", "Plataformas B2B", "APIs", "Integrações", "Ferramentas operacionais"],
+    "cta": "Conte seu projeto"
+  },
+  "ai": {
+    "sectionTitle": "IA só gera valor quando resolve um problema real.",
+    "sectionSubtitle": "Inteligência artificial aplicada onde realmente economiza tempo ou melhora decisões.",
+    "items": [
+      "Integração de LLM em sistemas existentes",
+      "AI agents",
+      "Automação administrativa",
+      "Análise de documentos",
+      "Classificação automática",
+      "Extração estruturada de dados",
+      "PDFs e documentos",
+      "Email workflows",
+      "Geração de relatórios",
+      "Integração IA + API",
+      "IA + ERP / CRM",
+      "Processamento de informações",
+      "Automação de tarefas repetitivas"
+    ]
+  },
+  "tech": {
+    "sectionTitle": "Capacidades técnicas",
+    "sectionSubtitle": "Tecnologias e práticas que sustentam cada projeto.",
+    "categories": {
+      "backend": {
+        "title": "Backend",
+        "items": ["Node.js", "TypeScript", "Java", "REST APIs", "Processamento assíncrono", "Event-driven systems"]
+      },
+      "frontend": {
+        "title": "Frontend",
+        "items": ["Vue", "Angular", "JavaScript", "TypeScript"]
+      },
+      "database": {
+        "title": "Banco de Dados",
+        "items": ["MongoDB", "PostgreSQL", "MySQL"]
+      },
+      "cloud": {
+        "title": "Cloud & Infraestrutura",
+        "items": ["AWS", "Azure", "Docker", "CI/CD"]
+      },
+      "integrations": {
+        "title": "Integrações",
+        "items": ["REST", "XML", "JSON", "Webhooks", "APIs de terceiros"]
+      },
+      "observability": {
+        "title": "Observabilidade",
+        "items": ["Datadog", "LogRocket"]
+      },
+      "quality": {
+        "title": "Qualidade",
+        "items": ["Testes unitários", "Testes de integração", "E2E", "Playwright", "Sonar"]
+      },
+      "architecture": {
+        "title": "Arquitetura",
+        "items": ["Filas (RabbitMQ, SQS)", "Event-driven architecture", "Background jobs", "Integração com terceiros", "Resiliência", "Retries", "Circuit breaker"]
+      }
+    }
+  },
+  "founder": {
+    "sectionTitle": "Experiência técnica por trás da WSS IT",
+    "name": "Wagner Santos",
+    "role": "Founder / Senior Software Engineer",
+    "bio": "Mais de 15 anos de experiência profissional com desenvolvimento de software.",
+    "areas": ["Enterprise software", "Banking", "Fintech", "Mortgage technology", "Backend engineering", "Integrações de APIs", "Workflows complexos", "Modernização de sistemas"],
+    "linkedinCta": "Ver experiência profissional",
+    "linkedinUrl": "https://www.linkedin.com/in/wagner-santos-silva-5a70a86a/"
+  },
+  "process": {
+    "sectionTitle": "Como transformamos uma necessidade em solução.",
+    "steps": [
+      { "number": "01", "title": "Entendimento", "description": "Entendemos o problema, o processo existente, restrições e objetivo." },
+      { "number": "02", "title": "Planejamento", "description": "Definimos arquitetura, escopo e estratégia." },
+      { "number": "03", "title": "Desenvolvimento", "description": "Implementação incremental e orientada à qualidade." },
+      { "number": "04", "title": "Validação", "description": "Testes técnicos e validação funcional." },
+      { "number": "05", "title": "Entrega", "description": "Deploy, documentação e acompanhamento." }
+    ]
+  },
+  "cases": {
+    "sectionTitle": "Experiência técnica real",
+    "sectionSubtitle": "Casos reais anonimizados que demonstram capacidade de engenharia.",
+    "items": {
+      "lenderSync": {
+        "title": "Sincronização Defensiva com Lender",
+        "problem": "Uma integração de lender poderia retornar XML parcial. Se o sistema simplesmente aplicasse os dados recebidos, campos previamente preenchidos poderiam ser perdidos.",
+        "solution": "Implementação de estratégia defensiva de sincronização onde dados existentes são preservados quando o payload externo não fornece novo valor.",
+        "technologies": ["Node.js", "TypeScript", "XML", "MISMO", "APIs"]
+      },
+      "mismoConversion": {
+        "title": "MISMO Conversion Layer",
+        "problem": "Necessidade de converter dados entre formato MISMO externo e modelo interno da aplicação em ambas as direções.",
+        "solution": "Camada de conversão bidirecional com mapping, validação, compatibilidade e interoperabilidade — permitindo importação e exportação consistentes.",
+        "technologies": ["Node.js", "TypeScript", "XML", "MISMO"]
+      },
+      "resilientIntegration": {
+        "title": "Integração Resiliente com Terceiros",
+        "problem": "Integrações com sistemas de terceiros estavam sujeitas a falhas intermitentes, timeouts e respostas inconsistentes.",
+        "solution": "Implementação de retries com backoff exponencial, circuit breaker, logging estruturado e observabilidade para garantir processamento defensivo.",
+        "technologies": ["Node.js", "TypeScript", "APIs", "Datadog"]
+      }
+    }
+  },
+  "faq": {
+    "sectionTitle": "Perguntas frequentes",
+    "items": [
+      { "question": "A WSS IT desenvolve sistemas do zero?", "answer": "Sim. Desenvolvemos sistemas sob medida a partir de uma necessidade ou processo real do negócio. Cada projeto parte da compreensão do problema, passando por planejamento, desenvolvimento e entrega." },
+      { "question": "É possível integrar sistemas que já existem?", "answer": "Sim. Conectamos sistemas internos, APIs externas, plataformas legadas e serviços de terceiros para que os dados e processos fluam de forma automatizada e confiável." },
+      { "question": "Vocês trabalham com APIs externas?", "answer": "Sim. Temos ampla experiência com integrações REST, XML, Webhooks e APIs de terceiros — incluindo APIs financeiras, de lenders, e de plataformas corporativas." },
+      { "question": "É possível automatizar processos com inteligência artificial?", "answer": "Sim. Aplicamos IA para automatizar processos reais — como análise de documentos, classificação, extração de informações, email workflows e geração de relatórios." },
+      { "question": "Vocês conseguem assumir sistemas existentes?", "answer": "Sim. Fazemos troubleshooting, debugging, análise de performance, correção de integrações quebradas e modernização de sistemas legados." },
+      { "question": "É possível contratar apenas uma avaliação técnica?", "answer": "Sim. Oferecemos consultoria para architecture review, code review, planejamento técnico e análise de sistemas — sem necessidade de contratar um projeto completo." },
+      { "question": "A WSS IT trabalha com empresas fora do Brasil?", "answer": "Sim. Atendemos empresas no Brasil e no exterior, especialmente nos segmentos de fintech, mortgage technology, SaaS e backend engineering." },
+      { "question": "Como funciona o orçamento?", "answer": "Você descreve o problema, ideia ou oportunidade. Analisamos as informações, entendemos o contexto e retornamos com uma proposta técnica e comercial adequada." }
+    ]
+  },
+  "cta": {
+    "headline": "Vamos conversar sobre seu projeto?",
+    "subheadline": "Descreva o problema, ideia ou oportunidade. Entraremos em contato para entender os próximos passos.",
+    "button": "Peça seu orçamento"
+  },
+  "quote": {
+    "pageTitle": "Orçamento",
+    "headline": "Conte-nos sobre seu projeto.",
+    "subheadline": "Descreva o problema, ideia ou oportunidade. Analisaremos as informações e entraremos em contato para entender os próximos passos.",
+    "fields": {
+      "name": "Nome",
+      "company": "Empresa",
+      "email": "Email",
+      "phone": "Telefone / WhatsApp",
+      "projectType": "Tipo de projeto",
+      "description": "Descrição do projeto",
+      "descriptionPlaceholder": "Descreva o problema que precisa resolver, a ideia que deseja implementar ou a oportunidade que identificou...",
+      "timeline": "Prazo desejado",
+      "budget": "Faixa estimada de investimento",
+      "howFound": "Como nos encontrou?",
+      "privacy": "Li e concordo com a",
+      "privacyLink": "Política de Privacidade",
+      "submit": "Enviar solicitação"
+    },
+    "projectTypes": {
+      "custom-software": "Sistema sob medida",
+      "website-landing-page": "Site / Landing Page",
+      "ai-automation": "Automação com IA",
+      "system-integration": "Integração entre sistemas / API",
+      "backend-api": "Backend / API",
+      "system-modernization": "Modernização de sistema",
+      "technical-consulting": "Consultoria técnica",
+      "code-review": "Code Review / Arquitetura",
+      "backend-rescue": "Problema crítico / Backend Rescue",
+      "other": "Outro"
+    },
+    "budgetRanges": {
+      "unknown": "Ainda não sei",
+      "up-to-5k": "Até R$5.000",
+      "5k-15k": "R$5.000 - R$15.000",
+      "15k-30k": "R$15.000 - R$30.000",
+      "30k-50k": "R$30.000 - R$50.000",
+      "above-50k": "Acima de R$50.000"
+    },
+    "selectPlaceholder": "Selecione...",
+    "required": "Obrigatório",
+    "sending": "Enviando...",
+    "success": {
+      "title": "Recebemos sua solicitação.",
+      "message": "Analisaremos as informações e entraremos em contato para entender os detalhes técnicos e comerciais do projeto.",
+      "back": "Voltar ao início"
+    },
+    "error": {
+      "title": "Não conseguimos enviar sua solicitação.",
+      "message": "Tente novamente em alguns instantes ou entre em contato diretamente pelo e-mail wssitconsultoria@gmail.com.",
+      "retry": "Tentar novamente"
+    },
+    "validation": {
+      "nameRequired": "Nome é obrigatório.",
+      "emailRequired": "Email é obrigatório.",
+      "emailInvalid": "Email inválido.",
+      "projectTypeRequired": "Selecione o tipo de projeto.",
+      "descriptionRequired": "Descreva seu projeto.",
+      "descriptionMinLength": "Descreva seu projeto com pelo menos 20 caracteres.",
+      "privacyRequired": "Você precisa concordar com a Política de Privacidade.",
+      "turnstileRequired": "Complete a verificação de segurança."
+    }
+  },
+  "about": {
+    "pageTitle": "Sobre a WSS IT",
+    "headline": "Tecnologia para problemas reais de negócio.",
+    "intro": "A WSS IT é uma consultoria em tecnologia da informação especializada em desenvolvimento de software sob medida, integrações de sistemas, automação com inteligência artificial e engenharia de backend.",
+    "mission": "Nosso foco é entender o problema de negócio antes de propor qualquer tecnologia. Cada projeto começa com a compreensão do processo, das restrições e do objetivo — e só então definimos a arquitetura e a solução.",
+    "experience": "Fundada em 2021, a WSS IT é construída sobre mais de 15 anos de experiência profissional com desenvolvimento de software em setores como banking, fintech, mortgage technology e enterprise software.",
+    "location": "Campo Largo, Paraná, Brasil. Atendendo empresas no Brasil e no exterior."
+  },
+  "solutions": {
+    "pageTitle": "Soluções",
+    "headline": "Soluções para setores específicos",
+    "subheadline": "Experiência técnica real aplicada a indústrias que exigem precisão, confiabilidade e segurança.",
+    "fintech": {
+      "title": "Fintech & Banking",
+      "headline": "Software para o setor financeiro",
+      "description": "Experiência real com sistemas bancários, integrações financeiras, enterprise systems e workflows de transações. Backend engineering para o setor que exige mais confiabilidade.",
+      "capabilities": ["Financial software", "Banking systems", "Integrações financeiras", "Enterprise systems", "Workflows de dados/transações", "Sistemas legados", "Backend engineering"]
+    },
+    "mortgage": {
+      "title": "Mortgage Technology",
+      "headline": "Mortgage software engineering",
+      "description": "Experiência com loan origination systems, integrações com lenders, MISMO, mapeamento de dados e workflows de MLO, processador e closing.",
+      "capabilities": ["Mortgage software", "Loan Origination Systems", "MISMO / XML", "Fannie Mae DU", "Freddie Mac LPA", "Integrações com lenders", "Data mapping", "Workflows MLO/Broker", "Import/Export"]
+    }
+  },
+  "footer": {
+    "tagline": "Software • AI • Integrations",
+    "company": "WSS IT Consultoria em Tecnologia da Informação Ltda.",
+    "cnpj": "CNPJ 41.112.274/0001-50",
+    "location": "Campo Largo — Paraná — Brasil",
+    "email": "wssitconsultoria@gmail.com",
+    "links": {
+      "services": "Serviços",
+      "solutions": "Soluções",
+      "about": "Sobre",
+      "quote": "Orçamento",
+      "privacy": "Privacidade",
+      "terms": "Termos"
+    },
+    "copyright": "© {year} WSS IT. Todos os direitos reservados."
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "message": "A página que você procura não existe ou foi movida.",
+    "cta": "Voltar ao início"
+  },
+  "error": {
+    "title": "Algo deu errado",
+    "message": "Ocorreu um erro inesperado. Tente novamente em alguns instantes.",
+    "cta": "Voltar ao início"
+  },
+  "breadcrumbs": {
+    "home": "Início",
+    "services": "Serviços",
+    "solutions": "Soluções",
+    "about": "Sobre",
+    "quote": "Orçamento",
+    "privacy": "Privacidade",
+    "terms": "Termos"
+  },
+  "servicesPages": {
+    "customSoftware": {
+      "title": "Desenvolvimento de Software sob Medida",
+      "metaDescription": "Desenvolvimento de software sob medida para empresas. Sistemas administrativos, SaaS, dashboards, portais e plataformas B2B.",
+      "headline": "Software desenvolvido para o processo real da sua empresa.",
+      "description": "Quando soluções prontas limitam o crescimento, construímos sistemas sob medida que se adaptam ao negócio — e não o contrário.",
+      "faq": [
+        { "question": "Qual o prazo médio para desenvolver um sistema?", "answer": "O prazo depende da complexidade. Projetos menores podem ser entregues em semanas, enquanto sistemas mais complexos seguem entregas incrementais ao longo de meses." },
+        { "question": "É possível integrar o sistema com ferramentas que já utilizamos?", "answer": "Sim. Os sistemas são projetados para integrar com APIs, bancos de dados e plataformas existentes." }
+      ]
+    },
+    "bespokeSystem": {
+      "title": "Sistemas sob Medida",
+      "metaDescription": "Sistemas sob medida para empresas. Dashboards, portais, backoffice, SaaS e ferramentas operacionais construídas para seu processo.",
+      "headline": "Sistemas que refletem exatamente como seu negócio opera.",
+      "description": "Dashboards, portais, backoffice e ferramentas internas criadas para resolver problemas específicos da sua operação."
+    },
+    "websites": {
+      "title": "Landing Pages & Sites",
+      "metaDescription": "Criação de landing pages profissionais e sites empresariais otimizados para conversão, SEO e campanhas pagas.",
+      "headline": "Presença digital que gera oportunidades.",
+      "description": "Sites institucionais e landing pages construídas com foco em conversão, performance e SEO — preparadas para campanhas pagas."
+    },
+    "integration": {
+      "title": "Integração de Sistemas & API",
+      "metaDescription": "Integração de sistemas e APIs. Conectamos sistemas internos, APIs externas e plataformas de terceiros para automatizar processos.",
+      "headline": "Conectamos sistemas para que os dados trabalhem juntos.",
+      "description": "REST APIs, Webhooks, XML, APIs financeiras e integrações com sistemas legados — sem perda de dados e com rastreabilidade."
+    },
+    "aiAutomation": {
+      "title": "Automação & Inteligência Artificial",
+      "metaDescription": "Automação de processos com inteligência artificial. LLM, AI agents, processamento de documentos e integração IA + sistemas.",
+      "headline": "IA aplicada onde realmente economiza tempo.",
+      "description": "Automação inteligente para processos reais: análise de documentos, classificação, extração de dados, relatórios e integração com sistemas existentes."
+    },
+    "backendApis": {
+      "title": "Backend & APIs",
+      "metaDescription": "Engenharia de backend e desenvolvimento de APIs robustas. Node.js, TypeScript, Java, processamento assíncrono e event-driven systems.",
+      "headline": "Backend robusto para aplicações que precisam funcionar.",
+      "description": "APIs, processamento assíncrono, filas, event-driven architecture e integrações projetadas para confiabilidade e escala."
+    },
+    "consulting": {
+      "title": "Consultoria em Tecnologia",
+      "metaDescription": "Consultoria em tecnologia da informação. Architecture review, code review, planejamento técnico e análise de sistemas.",
+      "headline": "Orientação técnica para decisões mais seguras.",
+      "description": "Architecture review, code review, planejamento técnico, modernização e análise de sistemas — sem necessidade de contratar um projeto completo."
+    },
+    "modernization": {
+      "title": "Modernização de Sistemas",
+      "metaDescription": "Modernização de sistemas legados. Migração, refatoração, melhoria de performance e atualização tecnológica.",
+      "headline": "Seu software deveria resolver problemas, não criar novos.",
+      "description": "Avaliação, refatoração e modernização de sistemas existentes — para que a tecnologia acompanhe o negócio."
+    },
+    "codeReview": {
+      "title": "Code Review & Arquitetura",
+      "metaDescription": "Code review e análise de arquitetura de software. Identificação de riscos, dívida técnica e oportunidades de melhoria.",
+      "headline": "Uma segunda opinião técnica antes de decisões importantes.",
+      "description": "Análise de código, arquitetura, riscos técnicos e oportunidades de melhoria — para decisões baseadas em evidência técnica."
+    }
+  }
+}
