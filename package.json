@@ -2,8 +2,13 @@
   "name": "WSS",
   "type": "module",
   "private": true,
+  "packageManager": "npm@11.9.0",
+  "engines": {
+    "node": ">=22.22.2"
+  },
   "scripts": {
     "build": "nuxt build",
+    "deploy": "npm run build && npx wrangler pages deploy dist",
     "assets:generate": "node scripts/generate-assets.mjs",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
