@@ -1,6 +1,20 @@
+<script setup lang="ts">
+const { locale } = useI18n()
+const { initUtm, captureReferrer } = useUtm()
+
+useHead(() => ({
+  htmlAttrs: { lang: locale.value === 'en' ? 'en-US' : 'pt-BR' },
+}))
+
+onMounted(() => {
+  initUtm()
+  captureReferrer()
+})
+</script>
+
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <NuxtRouteAnnouncer />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
