@@ -6,7 +6,6 @@
     "ogDescription": "Transformamos desafios de negócio em software. Sistemas sob medida, IA, integrações e engenharia de software."
   },
   "nav": {
-    "solutions": "Soluções",
     "services": "Serviços",
     "expertise": "Expertise",
     "about": "Sobre",
@@ -18,7 +17,7 @@
     "headline": "Transformamos desafios de negócio em software.",
     "subheadline": "Sistemas sob medida, inteligência artificial, integrações e engenharia de software para empresas que precisam ir além de soluções prontas.",
     "cta": "Peça seu orçamento",
-    "ctaSecondary": "Conheça nossas soluções"
+    "ctaSecondary": "Conheça nossos serviços"
   },
   "services": {
     "sectionTitle": "O que podemos construir para você?",
@@ -185,7 +184,7 @@
       { "question": "É possível automatizar processos com inteligência artificial?", "answer": "Sim. Aplicamos IA para automatizar processos reais — como análise de documentos, classificação, extração de informações, email workflows e geração de relatórios." },
       { "question": "Vocês conseguem assumir sistemas existentes?", "answer": "Sim. Fazemos troubleshooting, debugging, análise de performance, correção de integrações quebradas e modernização de sistemas legados." },
       { "question": "É possível contratar apenas uma avaliação técnica?", "answer": "Sim. Oferecemos consultoria para architecture review, code review, planejamento técnico e análise de sistemas — sem necessidade de contratar um projeto completo." },
-      { "question": "A WSS IT trabalha com empresas fora do Brasil?", "answer": "Sim. Atendemos empresas no Brasil e no exterior, especialmente nos segmentos de fintech, mortgage technology, SaaS e backend engineering." },
+      { "question": "A WSS IT trabalha com empresas fora do Brasil?", "answer": "Sim. Atendemos empresas de diferentes setores no Brasil e no exterior, adaptando a tecnologia ao contexto e aos objetivos de cada negócio." },
       { "question": "Como funciona o orçamento?", "answer": "Você descreve o problema, ideia ou oportunidade. Analisamos as informações, entendemos o contexto e retornamos com uma proposta técnica e comercial adequada." }
     ]
   },
@@ -262,25 +261,8 @@
     "headline": "Tecnologia para problemas reais de negócio.",
     "intro": "A WSS IT é uma consultoria em tecnologia da informação especializada em desenvolvimento de software sob medida, integrações de sistemas, automação com inteligência artificial e engenharia de backend.",
     "mission": "Nosso foco é entender o problema de negócio antes de propor qualquer tecnologia. Cada projeto começa com a compreensão do processo, das restrições e do objetivo — e só então definimos a arquitetura e a solução.",
-    "experience": "Fundada em 2021, a WSS IT é construída sobre mais de 15 anos de experiência profissional com desenvolvimento de software em setores como banking, fintech, mortgage technology e enterprise software.",
+    "experience": "Fundada em 2021, a WSS IT é construída sobre mais de 15 anos de experiência profissional com desenvolvimento de software em diferentes setores, operações e contextos de negócio.",
     "location": "Campo Largo, Paraná, Brasil. Atendendo empresas no Brasil e no exterior."
-  },
-  "solutions": {
-    "pageTitle": "Soluções",
-    "headline": "Soluções para setores específicos",
-    "subheadline": "Experiência técnica real aplicada a indústrias que exigem precisão, confiabilidade e segurança.",
-    "fintech": {
-      "title": "Fintech & Banking",
-      "headline": "Software para o setor financeiro",
-      "description": "Experiência real com sistemas bancários, integrações financeiras, enterprise systems e workflows de transações. Backend engineering para o setor que exige mais confiabilidade.",
-      "capabilities": ["Financial software", "Banking systems", "Integrações financeiras", "Enterprise systems", "Workflows de dados/transações", "Sistemas legados", "Backend engineering"]
-    },
-    "mortgage": {
-      "title": "Mortgage Technology",
-      "headline": "Mortgage software engineering",
-      "description": "Experiência com loan origination systems, integrações com lenders, MISMO, mapeamento de dados e workflows de MLO, processador e closing.",
-      "capabilities": ["Mortgage software", "Loan Origination Systems", "MISMO / XML", "Fannie Mae DU", "Freddie Mac LPA", "Integrações com lenders", "Data mapping", "Workflows MLO/Broker", "Import/Export"]
-    }
   },
   "footer": {
     "tagline": "Software • AI • Integrations",
@@ -290,7 +272,6 @@
     "email": "wssitconsultoria{'@'}gmail.com",
     "links": {
       "services": "Serviços",
-      "solutions": "Soluções",
       "about": "Sobre",
       "quote": "Orçamento",
       "privacy": "Privacidade",
@@ -311,7 +292,6 @@
   "breadcrumbs": {
     "home": "Início",
     "services": "Serviços",
-    "solutions": "Soluções",
     "about": "Sobre",
     "quote": "Orçamento",
     "privacy": "Privacidade",

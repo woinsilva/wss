@@ -6,7 +6,6 @@ const routes = useSiteRoutes()
 
 const links = computed(() => [
   { label: 'nav.services', to: routes.value.services },
-  { label: 'nav.solutions', to: routes.value.solutions },
   { label: 'nav.about', to: routes.value.about },
 ])
 

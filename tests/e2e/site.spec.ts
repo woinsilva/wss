@@ -16,6 +16,13 @@ test('renders localized service routes', async ({ page }) => {
   await expect(page.locator('h1')).toBeVisible()
 })
 
+test('redirects former industry pages to the general service catalog', async ({ page }) => {
+  await page.goto('/solucoes')
+  await expect(page).toHaveURL(/\/servicos\/?$/)
+  await page.goto('/en/solutions/mortgage-technology')
+  await expect(page).toHaveURL(/\/en\/services\/?$/)
+})
+
 test('opens and closes the keyboard-accessible mobile navigation', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await page.goto('/')

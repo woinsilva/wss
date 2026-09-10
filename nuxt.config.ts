@@ -1,16 +1,10 @@
 import tailwindcss from '@tailwindcss/vite'
 import { services } from './app/data/services'
-import { solutions } from './app/data/solutions'
 
 const serviceRoutes = services.flatMap(service => [
   `/servicos/${service.slugs['pt-BR']}`,
   `/en/services/${service.slugs.en}`,
 ])
-const solutionRoutes = solutions.flatMap(solution => [
-  `/solucoes/${solution.slugs['pt-BR']}`,
-  `/en/solutions/${solution.slugs.en}`,
-])
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   components: [{ path: '~/components', pathPrefix: false }],
@@ -35,7 +29,7 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'cloudflare_pages',
     prerender: {
-      routes: [...serviceRoutes, ...solutionRoutes],
+      routes: serviceRoutes,
     },
   },
 
@@ -44,8 +38,9 @@ export default defineNuxtConfig({
     '/': { prerender: true },
     '/servicos': { prerender: true },
     '/servicos/**': { prerender: true },
-    '/solucoes': { prerender: true },
-    '/solucoes/**': { prerender: true },
+    '/solucoes': { redirect: '/servicos' },
+    '/solucoes/fintech': { redirect: '/servicos' },
+    '/solucoes/mortgage-technology': { redirect: '/servicos' },
     '/sobre': { prerender: true },
     '/orcamento': { prerender: true },
     '/politica-de-privacidade': { prerender: true },
@@ -53,8 +48,9 @@ export default defineNuxtConfig({
     '/en': { prerender: true },
     '/en/services': { prerender: true },
     '/en/services/**': { prerender: true },
-    '/en/solutions': { prerender: true },
-    '/en/solutions/**': { prerender: true },
+    '/en/solutions': { redirect: '/en/services' },
+    '/en/solutions/fintech': { redirect: '/en/services' },
+    '/en/solutions/mortgage-technology': { redirect: '/en/services' },
     '/en/about': { prerender: true },
     '/en/quote': { prerender: true },
     '/en/privacy-policy': { prerender: true },
@@ -95,7 +91,7 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    urls: [...serviceRoutes, ...solutionRoutes],
+    urls: serviceRoutes,
   },
 
   // Runtime config

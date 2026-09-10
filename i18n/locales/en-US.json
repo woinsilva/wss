@@ -6,7 +6,6 @@
     "ogDescription": "We turn business challenges into software. Custom systems, AI, integrations and software engineering."
   },
   "nav": {
-    "solutions": "Solutions",
     "services": "Services",
     "expertise": "Expertise",
     "about": "About",
@@ -18,7 +17,7 @@
     "headline": "We turn business challenges into software.",
     "subheadline": "Custom systems, AI automation, integrations and software engineering for companies that need more than off-the-shelf solutions.",
     "cta": "Request a quote",
-    "ctaSecondary": "Explore our solutions"
+    "ctaSecondary": "Explore our services"
   },
   "services": {
     "sectionTitle": "What can we build for you?",
@@ -185,7 +184,7 @@
       { "question": "Can you automate processes with AI?", "answer": "Yes. We apply AI to automate real processes — document analysis, classification, data extraction, email workflows and report generation." },
       { "question": "Can you take over existing systems?", "answer": "Yes. We provide troubleshooting, debugging, performance analysis, broken integration fixes and legacy system modernization." },
       { "question": "Can I hire just a technical assessment?", "answer": "Yes. We offer consulting for architecture review, code review, technical planning and systems analysis — without the need to hire a full project." },
-      { "question": "Does WSS IT work with companies outside Brazil?", "answer": "Yes. We serve companies in Brazil and internationally, especially in fintech, mortgage technology, SaaS and backend engineering." },
+      { "question": "Does WSS IT work with companies outside Brazil?", "answer": "Yes. We serve companies across different industries in Brazil and internationally, adapting technology to each business context and objective." },
       { "question": "How does the quote process work?", "answer": "You describe the problem, idea or opportunity. We analyze the information, understand the context and return with a tailored technical and commercial proposal." }
     ]
   },
@@ -262,25 +261,8 @@
     "headline": "Technology for real business problems.",
     "intro": "WSS IT is an information technology consultancy specializing in custom software development, system integrations, AI automation and backend engineering.",
     "mission": "We focus on understanding the business problem before proposing any technology. Each project starts with understanding the process, constraints and objectives — only then we define the architecture and solution.",
-    "experience": "Founded in 2021, WSS IT is built on over 15 years of professional experience in software development across banking, fintech, mortgage technology and enterprise software.",
+    "experience": "Founded in 2021, WSS IT is built on over 15 years of professional experience developing software across different industries, operations and business contexts.",
     "location": "Campo Largo, Paraná, Brazil. Serving companies in Brazil and internationally."
-  },
-  "solutions": {
-    "pageTitle": "Solutions",
-    "headline": "Solutions for specific industries",
-    "subheadline": "Real technical experience applied to industries that demand precision, reliability and security.",
-    "fintech": {
-      "title": "Fintech & Banking",
-      "headline": "Software for the financial industry",
-      "description": "Real-world experience with banking systems, financial integrations, enterprise systems and transaction workflows. Backend engineering for the industry that demands the highest reliability.",
-      "capabilities": ["Financial software", "Banking systems", "Financial integrations", "Enterprise systems", "Data/transaction workflows", "Legacy systems", "Backend engineering"]
-    },
-    "mortgage": {
-      "title": "Mortgage Technology",
-      "headline": "Mortgage software engineering",
-      "description": "Hands-on experience with loan origination systems, lender integrations, MISMO, data mapping and MLO, processor and closing workflows.",
-      "capabilities": ["Mortgage software", "Loan Origination Systems", "MISMO / XML", "Fannie Mae DU", "Freddie Mac LPA", "Lender integrations", "Data mapping", "MLO/Broker workflows", "Import/Export"]
-    }
   },
   "footer": {
     "tagline": "Software • AI • Integrations",
@@ -290,7 +272,6 @@
     "email": "wssitconsultoria{'@'}gmail.com",
     "links": {
       "services": "Services",
-      "solutions": "Solutions",
       "about": "About",
       "quote": "Quote",
       "privacy": "Privacy",
@@ -311,7 +292,6 @@
   "breadcrumbs": {
     "home": "Home",
     "services": "Services",
-    "solutions": "Solutions",
     "about": "About",
     "quote": "Quote",
     "privacy": "Privacy",

@@ -4,7 +4,6 @@ const year = new Date().getFullYear()
 
 const links = computed(() => [
   { label: 'footer.links.services', to: routes.value.services },
-  { label: 'footer.links.solutions', to: routes.value.solutions },
   { label: 'footer.links.about', to: routes.value.about },
   { label: 'footer.links.quote', to: routes.value.quote },
   { label: 'footer.links.privacy', to: routes.value.privacy },

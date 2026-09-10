@@ -5,7 +5,6 @@ export function useSiteRoutes() {
     ? {
         home: '/en',
         services: '/en/services',
-        solutions: '/en/solutions',
         about: '/en/about',
         quote: '/en/quote',
         privacy: '/en/privacy-policy',
@@ -14,7 +13,6 @@ export function useSiteRoutes() {
     : {
         home: '/',
         services: '/servicos',
-        solutions: '/solucoes',
         about: '/sobre',
         quote: '/orcamento',
         privacy: '/politica-de-privacidade',

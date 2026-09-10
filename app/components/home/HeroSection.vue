@@ -13,7 +13,7 @@ const routes = useSiteRoutes()
         <p class="hero__lead">{{ $t('hero.subheadline') }}</p>
         <div class="hero__actions">
           <AppButton :to="routes.quote" size="large">{{ $t('hero.cta') }}</AppButton>
-          <AppButton :to="routes.solutions" variant="secondary" size="large">{{ $t('hero.ctaSecondary') }}</AppButton>
+          <AppButton :to="routes.services" variant="secondary" size="large">{{ $t('hero.ctaSecondary') }}</AppButton>
         </div>
       </div>
       <IntegrationVisualization />
