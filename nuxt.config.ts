@@ -1,9 +1,14 @@
 import tailwindcss from '@tailwindcss/vite'
 import { services } from './app/data/services'
+import { solutions } from './app/data/solutions'
 
 const serviceRoutes = services.flatMap(service => [
   `/servicos/${service.slugs['pt-BR']}`,
   `/en/services/${service.slugs.en}`,
+])
+const solutionRoutes = solutions.flatMap(solution => [
+  `/solucoes/${solution.slugs['pt-BR']}`,
+  `/en/solutions/${solution.slugs.en}`,
 ])
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -28,7 +33,7 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'cloudflare_pages',
     prerender: {
-      routes: serviceRoutes,
+      routes: [...serviceRoutes, ...solutionRoutes],
     },
   },
 
@@ -37,9 +42,13 @@ export default defineNuxtConfig({
     '/': { prerender: true },
     '/servicos': { prerender: true },
     '/servicos/**': { prerender: true },
+    '/solucoes': { prerender: true },
+    '/solucoes/**': { prerender: true },
     '/en': { prerender: true },
     '/en/services': { prerender: true },
     '/en/services/**': { prerender: true },
+    '/en/solutions': { prerender: true },
+    '/en/solutions/**': { prerender: true },
     '/api/**': { prerender: false },
   },
 
