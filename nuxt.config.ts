@@ -1,4 +1,10 @@
 import tailwindcss from '@tailwindcss/vite'
+import { services } from './app/data/services'
+
+const serviceRoutes = services.flatMap(service => [
+  `/servicos/${service.slugs['pt-BR']}`,
+  `/en/services/${service.slugs.en}`,
+])
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -21,12 +27,19 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: 'cloudflare_pages',
+    prerender: {
+      routes: serviceRoutes,
+    },
   },
 
   // Prerender all public pages, keep API as serverless function
   routeRules: {
     '/': { prerender: true },
+    '/servicos': { prerender: true },
+    '/servicos/**': { prerender: true },
     '/en': { prerender: true },
+    '/en/services': { prerender: true },
+    '/en/services/**': { prerender: true },
     '/api/**': { prerender: false },
   },
 
