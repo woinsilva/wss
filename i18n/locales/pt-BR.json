@@ -96,7 +96,7 @@
   },
   "tech": {
     "sectionTitle": "Capacidades técnicas",
-    "sectionSubtitle": "Tecnologias e práticas que sustentam cada projeto.",
+    "sectionSubtitle": "Estas são algumas das tecnologias e práticas que já utilizamos em projetos reais — não uma lista fechada. Avaliamos e adotamos a stack mais adequada ao contexto, aos requisitos e aos objetivos de cada projeto.",
     "categories": {
       "backend": {
         "title": "Backend",
