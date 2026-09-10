@@ -94,6 +94,7 @@ export default defineNuxtConfig({
   // Runtime config
   runtimeConfig: {
     resendApiKey: '',
+    quoteFromEmail: 'WSS IT <contato@wssit.com.br>',
     quoteDestinationEmail: 'wssitconsultoria@gmail.com',
     turnstileSecretKey: '',
     public: {
