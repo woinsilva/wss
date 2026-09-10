@@ -1,18 +1,25 @@
 <script setup lang="ts">
-const routes = useSiteRoutes()
+const { t } = useI18n()
+
+useSeoMeta({
+  title: () => t('meta.title'),
+  description: () => t('meta.description'),
+  ogTitle: () => t('meta.ogTitle'),
+  ogDescription: () => t('meta.ogDescription'),
+})
 </script>
 
 <template>
-  <section class="section">
-    <div class="container">
-      <SectionHeading
-        :eyebrow="$t('footer.tagline')"
-        :title="$t('hero.headline')"
-        :description="$t('hero.subheadline')"
-      />
-      <AppButton :to="routes.quote" size="large">
-        {{ $t('hero.primaryCta') }}
-      </AppButton>
-    </div>
-  </section>
+  <div>
+    <HeroSection />
+    <ServicesOverview />
+    <CustomSoftwareSection />
+    <AISection />
+    <TechCapabilities />
+    <FounderSection />
+    <ProcessSection />
+    <CaseStudiesSection />
+    <FAQSection />
+    <CTASection />
+  </div>
 </template>

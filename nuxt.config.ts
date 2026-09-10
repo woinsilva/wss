@@ -26,16 +26,7 @@ export default defineNuxtConfig({
   // Prerender all public pages, keep API as serverless function
   routeRules: {
     '/': { prerender: true },
-    '/servicos': { prerender: true },
-    '/servicos/**': { prerender: true },
-    '/solucoes': { prerender: true },
-    '/solucoes/**': { prerender: true },
-    '/sobre': { prerender: true },
-    '/orcamento': { prerender: true },
-    '/politica-de-privacidade': { prerender: true },
-    '/termos': { prerender: true },
     '/en': { prerender: true },
-    '/en/**': { prerender: true },
     '/api/**': { prerender: false },
   },
 
