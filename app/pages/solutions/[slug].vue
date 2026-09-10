@@ -11,6 +11,7 @@ const content = computed(() => tm(`solutions.${solution.value?.key}`) as unknown
 const setI18nParams = useSetI18nParams()
 setI18nParams({ 'pt-BR': { slug: solution.value.slugs['pt-BR'] }, en: { slug: solution.value.slugs.en } })
 useSeoMeta({ title: () => `${content.value.title} — WSS IT`, description: () => content.value.description })
+useHead(() => ({ script: [{ type: 'application/ld+json', innerHTML: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Service', name: content.value.title, description: content.value.description, provider: { '@type': 'Organization', name: 'WSS IT' } }) }] }))
 </script>
 
 <template>

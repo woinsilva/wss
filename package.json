@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
+    "assets:generate": "node scripts/generate-assets.mjs",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "lint": "eslint .",
@@ -28,6 +29,7 @@
     "@tailwindcss/vite": "^4.1.13",
     "eslint": "^9.35.0",
     "happy-dom": "^18.0.1",
+    "sharp": "^0.35.4",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4",

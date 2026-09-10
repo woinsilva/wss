@@ -1,2 +1,4 @@
 User-Agent: *
-Disallow:
+Allow: /
+
+Sitemap: https://wssit.com.br/sitemap_index.xml

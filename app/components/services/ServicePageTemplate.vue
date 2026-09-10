@@ -17,6 +17,15 @@ useSeoMeta({
   description: () => content.value.metaDescription,
 })
 
+useHead(() => ({ script: [{ type: 'application/ld+json', innerHTML: JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: content.value.title,
+  description: content.value.metaDescription,
+  provider: { '@type': 'Organization', name: 'WSS IT', url: 'https://wssit.com.br' },
+  areaServed: ['Brazil', 'United States'],
+}) }] }))
+
 onMounted(() => trackServiceViewed(props.service.slugs[locale.value as 'pt-BR' | 'en'], locale.value))
 </script>
 
