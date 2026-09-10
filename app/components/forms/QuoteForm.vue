@@ -2,7 +2,7 @@
 import type { QuoteFormData } from '~/types'
 import { quoteFormSchema } from '~~/shared/utils/quoteSchema'
 
-const { tm, locale } = useI18n()
+const { locale } = useI18n()
 const routes = useSiteRoutes()
 const { getFirstTouch, getLastTouch } = useUtm()
 const { trackQuoteFormStarted, trackQuoteFormSubmitted, trackQuoteFormSuccess, trackQuoteFormError } = useAnalytics()
@@ -11,8 +11,10 @@ const form = reactive<QuoteFormData>({ name: '', company: '', email: '', phone: 
 const errors = ref<Record<string, string>>({})
 const status = ref<'idle' | 'sending' | 'success' | 'error'>('idle')
 const started = ref(false)
-const projectTypes = computed(() => Object.entries(tm('quote.projectTypes') as unknown as Record<string, string>))
-const budgets = computed(() => Object.entries(tm('quote.budgetRanges') as unknown as Record<string, string>))
+const projectTypeContent = useTranslatedContent<Record<string, string>>('quote.projectTypes')
+const budgetContent = useTranslatedContent<Record<string, string>>('quote.budgetRanges')
+const projectTypes = computed(() => Object.entries(projectTypeContent.value))
+const budgets = computed(() => Object.entries(budgetContent.value))
 
 function markStarted() {
   if (started.value) return

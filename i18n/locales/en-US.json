@@ -243,7 +243,7 @@
     },
     "error": {
       "title": "We couldn't send your request.",
-      "message": "Please try again in a few moments or contact us directly at wssitconsultoria@gmail.com.",
+      "message": "Please try again in a few moments or contact us directly at wssitconsultoria{'@'}gmail.com.",
       "retry": "Try again"
     },
     "validation": {
@@ -287,7 +287,7 @@
     "company": "WSS IT Consultoria em Tecnologia da Informação Ltda.",
     "cnpj": "CNPJ 41.112.274/0001-50",
     "location": "Campo Largo — Paraná — Brazil",
-    "email": "wssitconsultoria@gmail.com",
+    "email": "wssitconsultoria{'@'}gmail.com",
     "links": {
       "services": "Services",
       "solutions": "Solutions",

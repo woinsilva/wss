@@ -1,7 +1,6 @@
 <script setup lang="ts">
 interface Step { number: string, title: string, description: string }
-const { tm } = useI18n()
-const steps = computed(() => tm('process.steps') as unknown as Step[])
+const steps = useTranslatedContent<Step[]>('process.steps')
 </script>
 
 <template>

@@ -3,11 +3,11 @@ import { findSolutionBySlug } from '~/data/solutions'
 
 defineI18nRoute({ paths: { 'pt-BR': '/solucoes/[slug]', en: '/solutions/[slug]' } })
 const route = useRoute()
-const { tm, t } = useI18n()
+const { t } = useI18n()
 const routes = useSiteRoutes()
 const solution = computed(() => findSolutionBySlug(String(route.params.slug)))
 if (!solution.value) throw createError({ statusCode: 404, statusMessage: 'Solution not found' })
-const content = computed(() => tm(`solutions.${solution.value?.key}`) as unknown as { title: string, headline: string, description: string, capabilities: string[] })
+const content = useTranslatedContent<{ title: string, headline: string, description: string, capabilities: string[] }>(() => `solutions.${solution.value?.key}`)
 const setI18nParams = useSetI18nParams()
 setI18nParams({ 'pt-BR': { slug: solution.value.slugs['pt-BR'] }, en: { slug: solution.value.slugs.en } })
 useSeoMeta({ title: () => `${content.value.title} — WSS IT`, description: () => content.value.description })

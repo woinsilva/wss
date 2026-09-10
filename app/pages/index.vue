@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
-const { tm } = useI18n()
+const faqItems = useTranslatedContent<Array<{ question: string, answer: string }>>('faq.items')
 
 useSeoMeta({
   title: () => t('meta.title'),
@@ -12,7 +12,7 @@ useSeoMeta({
 useHead(() => ({ script: [{ type: 'application/ld+json', innerHTML: JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: (tm('faq.items') as unknown as Array<{ question: string, answer: string }>).map(item => ({
+  mainEntity: faqItems.value.map(item => ({
     '@type': 'Question',
     name: item.question,
     acceptedAnswer: { '@type': 'Answer', text: item.answer },

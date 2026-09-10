@@ -1,9 +1,10 @@
 <script setup lang="ts">
 interface ServiceCard { title: string, context: string, description: string }
-const { tm, locale } = useI18n()
+const { locale } = useI18n()
 const routes = useSiteRoutes()
 const keys = ['websites', 'customSoftware', 'aiAutomation', 'integration', 'backend', 'backendRescue']
-const services = computed(() => keys.map(key => ({ key, ...(tm(`services.items.${key}`) as unknown as ServiceCard) })))
+const content = useTranslatedContent<Record<string, ServiceCard>>('services.items')
+const services = computed(() => keys.map(key => ({ key, ...content.value[key]! })))
 const slugs: Record<string, [string, string]> = {
   websites: ['landing-pages-sites', 'websites-landing-pages'], customSoftware: ['desenvolvimento-de-software', 'custom-software-development'],
   aiAutomation: ['automacao-inteligencia-artificial', 'ai-automation'], integration: ['integracao-de-sistemas-api', 'api-integration'],

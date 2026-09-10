@@ -2,11 +2,12 @@
 import { services } from '~/data/services'
 
 defineI18nRoute({ paths: { 'pt-BR': '/servicos', en: '/services' } })
-const { tm, t, locale } = useI18n()
+const { t, locale } = useI18n()
 const routes = useSiteRoutes()
+const pageContent = useTranslatedContent<Record<string, { title: string, description: string }>>('servicesPages')
 
 function content(service: typeof services[number]) {
-  return tm(`servicesPages.${service.translationKey}`) as unknown as { title: string, description: string }
+  return pageContent.value[service.translationKey]!
 }
 function url(service: typeof services[number]) {
   return `${routes.value.services}/${service.slugs[locale.value as 'pt-BR' | 'en']}`

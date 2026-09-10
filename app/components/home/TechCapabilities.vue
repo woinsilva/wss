@@ -1,7 +1,7 @@
 <script setup lang="ts">
 interface Category { title: string, items: string[] }
-const { tm } = useI18n()
-const categories = computed(() => Object.values(tm('tech.categories') as unknown as Record<string, Category>))
+const content = useTranslatedContent<Record<string, Category>>('tech.categories')
+const categories = computed(() => Object.values(content.value))
 </script>
 
 <template>

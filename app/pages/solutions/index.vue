@@ -2,9 +2,10 @@
 import { solutions } from '~/data/solutions'
 
 defineI18nRoute({ paths: { 'pt-BR': '/solucoes', en: '/solutions' } })
-const { tm, t, locale } = useI18n()
+const { t, locale } = useI18n()
 const routes = useSiteRoutes()
-function content(key: string) { return tm(`solutions.${key}`) as unknown as { title: string, headline: string, description: string } }
+const solutionContent = useTranslatedContent<Record<string, { title: string, headline: string, description: string }>>('solutions')
+function content(key: string) { return solutionContent.value[key]! }
 function url(solution: typeof solutions[number]) { return `${routes.value.solutions}/${solution.slugs[locale.value as 'pt-BR' | 'en']}` }
 useSeoMeta({ title: () => `${t('solutions.pageTitle')} — WSS IT`, description: () => t('solutions.subheadline') })
 </script>

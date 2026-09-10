@@ -5,10 +5,10 @@ interface PageContent { title: string, metaDescription: string, headline: string
 interface CapabilityContent { capabilities: string[] }
 
 const props = defineProps<{ service: ServiceDefinition }>()
-const { tm, t, locale } = useI18n()
+const { t, locale } = useI18n()
 const routes = useSiteRoutes()
-const content = computed(() => tm(`servicesPages.${props.service.translationKey}`) as unknown as PageContent)
-const source = computed(() => tm(`services.items.${props.service.capabilityKey}`) as unknown as CapabilityContent)
+const content = useTranslatedContent<PageContent>(() => `servicesPages.${props.service.translationKey}`)
+const source = useTranslatedContent<CapabilityContent>(() => `services.items.${props.service.capabilityKey}`)
 const capabilities = computed(() => source.value.capabilities ?? [])
 const { trackServiceViewed, trackCtaClicked } = useAnalytics()
 

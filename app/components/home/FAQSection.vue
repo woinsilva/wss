@@ -1,7 +1,6 @@
 <script setup lang="ts">
 interface Faq { question: string, answer: string }
-const { tm } = useI18n()
-const items = computed(() => tm('faq.items') as unknown as Faq[])
+const items = useTranslatedContent<Faq[]>('faq.items')
 </script>
 
 <template>

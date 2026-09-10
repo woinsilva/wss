@@ -1,7 +1,7 @@
 <script setup lang="ts">
 interface Study { title: string, problem: string, solution: string, technologies: string[] }
-const { tm } = useI18n()
-const studies = computed(() => Object.values(tm('cases.items') as unknown as Record<string, Study>))
+const content = useTranslatedContent<Record<string, Study>>('cases.items')
+const studies = computed(() => Object.values(content.value))
 </script>
 
 <template>

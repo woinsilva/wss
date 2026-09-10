@@ -1,6 +1,5 @@
 <script setup lang="ts">
-const { tm } = useI18n()
-const areas = computed(() => tm('founder.areas') as unknown as string[])
+const areas = useTranslatedContent<string[]>('founder.areas')
 const { trackLinkedInClicked } = useAnalytics()
 const { locale } = useI18n()
 </script>

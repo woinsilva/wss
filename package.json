@@ -10,7 +10,9 @@
     "lint": "eslint .",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test": "vitest run --passWithNoTests",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test",
     "typecheck": "nuxt typecheck",
     "validate": "npm run lint && npm run test && npm run typecheck && npm run build"
   },
@@ -25,14 +27,15 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.9.0",
-    "@nuxt/test-utils": "^3.20.1",
+    "@playwright/test": "^1.63.0",
     "@tailwindcss/vite": "^4.1.13",
-    "eslint": "^9.35.0",
-    "happy-dom": "^18.0.1",
+    "@vitest/coverage-v8": "^5.0.0",
+    "eslint": "^10.10.0",
+    "happy-dom": "^20.14.3",
     "sharp": "^0.35.4",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2",
-    "vitest": "^3.2.4",
+    "vitest": "^5.0.0",
     "vue-tsc": "^3.0.6"
   }
 }

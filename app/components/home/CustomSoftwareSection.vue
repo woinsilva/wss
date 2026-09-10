@@ -1,7 +1,6 @@
 <script setup lang="ts">
-const { tm } = useI18n()
 const routes = useSiteRoutes()
-const items = computed(() => tm('customSoftware.items') as unknown as string[])
+const items = useTranslatedContent<string[]>('customSoftware.items')
 </script>
 
 <template>

@@ -1,6 +1,5 @@
 <script setup lang="ts">
-const { tm } = useI18n()
-const items = computed(() => tm('ai.items') as unknown as string[])
+const items = useTranslatedContent<string[]>('ai.items')
 </script>
 
 <template>

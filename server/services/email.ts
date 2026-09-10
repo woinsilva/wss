@@ -41,8 +41,8 @@ export class ResendEmailService implements EmailService {
         'x-batch-validation': 'strict',
       },
       body: JSON.stringify([
-      { from: this.from, to: this.destination, reply_to: payload.email, ...internal },
-      { from: this.from, to: payload.email, ...confirmation },
+        { from: this.from, to: this.destination, reply_to: payload.email, ...internal },
+        { from: this.from, to: payload.email, ...confirmation },
       ]),
     })
     if (!response.ok) throw new Error(`Email provider rejected request with status ${response.status}`)
