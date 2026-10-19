@@ -10,7 +10,7 @@ export interface QuoteFormData {
   howFound: string
   privacyConsent: boolean
   turnstileToken: string
-  /** Honeypot field — must be empty */
+  /** Honeypot field - must be empty */
   website: string
 }
 

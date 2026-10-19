@@ -10,7 +10,7 @@ describe('quote email service', () => {
     expect(internal.subject).toContain('NOVO ORÇAMENTO')
     expect(internal.html).toContain('&lt;Admin&gt;')
     expect(internal.html).not.toContain('<b>Do not render</b>')
-    expect(confirmation.subject).toBe('Recebemos sua solicitação — WSS IT')
+    expect(confirmation.subject).toBe('Recebemos sua solicitação - WSS IT')
   })
 
   it('builds the English confirmation', () => {

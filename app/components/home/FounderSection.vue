@@ -1,19 +1,141 @@
 <script setup lang="ts">
-const areas = useTranslatedContent<string[]>('founder.areas')
+const highlights = useTranslatedContent<string[]>('founder.highlights')
+const routes = useSiteRoutes()
 const { trackLinkedInClicked } = useAnalytics()
 const { locale } = useI18n()
+const props = withDefaults(defineProps<{ showAboutLink?: boolean }>(), { showAboutLink: true })
 </script>
 
 <template>
-  <section class="section founder-section"><div class="container founder-section__grid"><div class="founder-section__monogram" aria-hidden="true">WS</div><div><SectionHeading :title="$t('founder.sectionTitle')" /><h3>{{ $t('founder.name') }}</h3><p class="founder-section__role">{{ $t('founder.role') }}</p><p>{{ $t('founder.bio') }}</p><ul><li v-for="area in areas" :key="area">{{ area }}</li></ul><a :href="$t('founder.linkedinUrl')" target="_blank" rel="noopener" @click="trackLinkedInClicked('founder', locale)">{{ $t('founder.linkedinCta') }} ↗</a></div></div></section>
+  <section class="section surface-subtle founder">
+    <div class="container founder__grid">
+      <div v-reveal class="founder__card">
+        <div class="founder__monogram" aria-hidden="true">WS</div>
+        <p class="founder__name">{{ $t('founder.name') }}</p>
+        <p class="founder__role">{{ $t('founder.role') }}</p>
+        <a :href="$t('founder.linkedinUrl')" target="_blank" rel="noopener" class="founder__linkedin" @click="trackLinkedInClicked('founder', locale)">
+          <AppIcon name="linkedin" /> {{ $t('founder.linkedinCta') }} <AppIcon name="external" />
+        </a>
+      </div>
+
+      <div>
+        <SectionHeading :eyebrow="$t('founder.eyebrow')" :title="$t('founder.sectionTitle')" />
+        <p class="founder__bio">{{ $t('founder.bio') }}</p>
+        <ul class="founder__highlights">
+          <li v-for="(item, index) in highlights" :key="item" v-reveal="index * 80"><AppIcon name="check" />{{ item }}</li>
+        </ul>
+        <NuxtLink v-if="props.showAboutLink" :to="routes.about" class="text-link founder__more">{{ $t('founder.aboutCta') }} <span aria-hidden="true">→</span></NuxtLink>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>
-.founder-section { background: var(--color-bg-surface); }
-.founder-section__grid { display: grid; grid-template-columns: .7fr 1.3fr; align-items: center; gap: var(--space-16); }
-.founder-section__monogram { display: grid; width: min(21rem, 70vw); aspect-ratio: 1; place-items: center; border: 1px solid var(--color-border); border-radius: var(--radius-2xl); background: var(--gradient-subtle); color: var(--color-text-primary); font-size: clamp(4rem, 10vw, 8rem); font-weight: 800; }
-.founder-section__role { margin: var(--space-2) 0 var(--space-5); color: var(--color-accent-cyan); }
-.founder-section ul { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: var(--space-6) 0; list-style: none; }
-.founder-section li { padding: var(--space-2) var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-full); color: var(--color-text-secondary); font-size: var(--font-size-sm); }
-@media (max-width: 760px) { .founder-section__grid { grid-template-columns: 1fr; } }
+.founder {
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.founder__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+  align-items: start;
+  gap: var(--space-16);
+}
+
+.founder__card {
+  padding: var(--space-8);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.founder__monogram {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  place-items: center;
+  border-radius: var(--radius-md);
+  background:
+    radial-gradient(circle at 30% 20%, rgba(91, 140, 255, 0.35), transparent 55%),
+    var(--color-navy);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: clamp(3.5rem, 8vw, 5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.founder__name {
+  margin-top: var(--space-6);
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.founder__role {
+  margin-top: var(--space-1);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.founder__linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.founder__linkedin :deep(.app-icon) {
+  width: 1rem;
+  height: 1rem;
+}
+
+.founder .section-heading {
+  margin-bottom: var(--space-6);
+}
+
+.founder__bio {
+  max-width: 42rem;
+  font-size: var(--font-size-lg);
+}
+
+.founder__highlights {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+  list-style: none;
+}
+
+.founder__highlights li {
+  display: flex;
+  gap: var(--space-3);
+  color: var(--color-text-primary);
+}
+
+.founder__highlights :deep(.app-icon) {
+  margin-top: 0.2rem;
+  color: var(--color-accent);
+}
+
+.founder__more {
+  margin-top: var(--space-8);
+}
+
+@media (max-width: 900px) {
+  .founder__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .founder__card {
+    max-width: 26rem;
+    order: 2;
+  }
+}
 </style>

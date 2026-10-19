@@ -18,16 +18,17 @@ useHead(() => ({
 useSeoMeta({
   ogType: 'website',
   ogSiteName: 'WSS IT',
-  ogImage: () => `${config.public.siteUrl || 'https://wssit.com.br'}/og-image.png`,
+  ogImage: () => `${config.public.siteUrl}/og-image.png`,
   twitterCard: 'summary_large_image',
-  twitterImage: () => `${config.public.siteUrl || 'https://wssit.com.br'}/og-image.png`,
+  twitterImage: () => `${config.public.siteUrl}/og-image.png`,
+  robots: () => config.public.siteIndexable ? 'index, follow' : 'noindex, nofollow',
 })
 
 useHead({ script: [{ type: 'application/ld+json', innerHTML: JSON.stringify({
   '@context': 'https://schema.org',
   '@type': ['Organization', 'ProfessionalService'],
   name: 'WSS IT',
-  url: 'https://wssit.com.br',
+  url: config.public.siteUrl,
   email: 'wssitconsultoria@gmail.com',
   areaServed: ['Brazil', 'Paraná', 'Curitiba', 'Campo Largo'],
   address: { '@type': 'PostalAddress', addressLocality: 'Campo Largo', addressRegion: 'PR', addressCountry: 'BR' },

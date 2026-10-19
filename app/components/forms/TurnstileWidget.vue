@@ -13,7 +13,7 @@ onMounted(() => {
   if (!config.public.turnstileSiteKey || !container.value) return
   const render = () => window.turnstile?.render(container.value!, {
     sitekey: config.public.turnstileSiteKey,
-    theme: 'dark',
+    theme: 'light',
     callback: (token: string) => emit('verify', token),
     'expired-callback': () => emit('expired'),
     'error-callback': () => emit('expired'),

@@ -6,6 +6,7 @@ const routes = useSiteRoutes()
 
 const links = computed(() => [
   { label: 'nav.services', to: routes.value.services },
+  { label: 'nav.cases', to: `${routes.value.home}#casos` },
   { label: 'nav.about', to: routes.value.about },
 ])
 
@@ -48,21 +49,26 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <Transition name="menu">
+  <Transition name="menu" :duration="{ enter: 650, leave: 220 }">
     <div v-if="open" class="mobile-nav" @click.self="emit('close')">
       <nav ref="panel" class="mobile-nav__panel" aria-label="Mobile">
         <NuxtLink
-          v-for="link in links"
+          v-for="(link, index) in links"
           :key="link.label"
           :to="link.to"
+          class="mobile-nav__link"
+          :style="{ '--i': index }"
           @click="emit('close')"
         >
           {{ $t(link.label) }}
+          <span aria-hidden="true">→</span>
         </NuxtLink>
-        <AppButton :to="routes.quote" size="large" @click="emit('close')">
-          {{ $t('nav.quote') }}
-        </AppButton>
-        <LanguageSwitcher />
+        <div class="mobile-nav__footer" :style="{ '--i': links.length }">
+          <AppButton :to="routes.quote" size="large" @click="emit('close')">
+            {{ $t('nav.quote') }}
+          </AppButton>
+          <LanguageSwitcher />
+        </div>
       </nav>
     </div>
   </Transition>
@@ -72,28 +78,48 @@ onUnmounted(() => {
 .mobile-nav {
   position: fixed;
   z-index: var(--z-overlay);
-  inset: 4.5rem 0 0;
-  display: flex;
-  justify-content: flex-end;
-  background: rgba(8, 11, 18, 0.78);
-  backdrop-filter: blur(8px);
+  inset: var(--header-height) 0 0;
+  background: rgba(11, 18, 32, 0.32);
 }
 
 .mobile-nav__panel {
   display: flex;
-  width: min(88vw, 24rem);
-  height: 100%;
+  max-height: 100%;
   flex-direction: column;
-  gap: var(--space-6);
-  padding: var(--space-10) var(--space-6);
-  border-left: 1px solid var(--color-border);
-  background: var(--color-bg-surface);
+  overflow-y: auto;
+  padding: var(--space-4) var(--space-5) var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-primary);
+  box-shadow: var(--shadow-lg);
 }
 
-.mobile-nav__panel > a:not(.btn) {
+.mobile-nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid var(--color-border);
   color: var(--color-text-primary);
+  font-family: var(--font-heading);
   font-size: var(--font-size-xl);
-  font-weight: 650;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.mobile-nav__link span {
+  color: var(--color-text-muted);
+}
+
+.mobile-nav__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-5);
+  margin-top: var(--space-8);
+}
+
+.mobile-nav__footer :deep(.language-switcher) {
+  align-self: center;
 }
 
 .menu-enter-active,
@@ -113,6 +139,28 @@ onUnmounted(() => {
 
 .menu-enter-from .mobile-nav__panel,
 .menu-leave-to .mobile-nav__panel {
-  transform: translateX(100%);
+  transform: translateY(-0.75rem);
+}
+
+/* Links slide in one after another. */
+.menu-enter-active .mobile-nav__link,
+.menu-enter-active .mobile-nav__footer {
+  transition: opacity 0.4s var(--ease-out), transform 0.4s var(--ease-out);
+  transition-delay: calc(60ms + var(--i) * 55ms);
+}
+
+.menu-enter-from .mobile-nav__link,
+.menu-enter-from .mobile-nav__footer {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.mobile-nav__link span {
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.mobile-nav__link:hover span {
+  color: var(--color-accent);
+  transform: translateX(4px);
 }
 </style>

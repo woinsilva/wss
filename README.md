@@ -40,6 +40,7 @@ As credenciais reais nunca devem ser commitadas. Para testar o envio completo do
 | `npm run test:e2e` | Cenários de navegador e API no Chromium |
 | `npm run validate` | Lint, testes, typecheck e build de produção |
 | `npm run build` | Build híbrido para Cloudflare Pages em `dist/` |
+| `npm run build:preview` | Build de teste com o endereço gratuito e configuração pública do Wrangler |
 | `npm run deploy` | Build e upload direto com Wrangler |
 | `npm run assets:generate` | Regenera os PNGs de marca a partir dos SVGs |
 
@@ -74,6 +75,8 @@ Consulte [.env.example](.env.example). Variáveis sem o prefixo `PUBLIC` ficam d
 | `NUXT_PUBLIC_TURNSTILE_SITE_KEY` | Widget Turnstile no formulário |
 | `NUXT_PUBLIC_GA_ID` | ID opcional do Google Analytics 4 |
 | `NUXT_PUBLIC_SITE_URL` | Origem canônica, sitemap e Open Graph |
+| `NUXT_PUBLIC_SITE_INDEXABLE` | Permite indexação quando `true`; mantenha `false` no teste |
+| `NUXT_PUBLIC_QUOTE_DELIVERY_MODE` | `server` usa Resend/Turnstile; `email-client` prepara uma mensagem; `formsubmit` usa formulário hospedado após ativação do e-mail |
 
 ## Qualidade e segurança
 

@@ -23,7 +23,7 @@ export function useAnalytics() {
       })
     }
     catch {
-      // Silently fail — analytics should never break the app
+      // Silently fail - analytics should never break the app
     }
   }
 

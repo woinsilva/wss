@@ -1,38 +1,30 @@
+<script setup lang="ts">
+/** `light` = for light backgrounds (navy wordmark); `dark` = for dark backgrounds (white wordmark). */
+const props = withDefaults(defineProps<{ variant?: 'light' | 'dark' }>(), { variant: 'light' })
+const src = computed(() => props.variant === 'dark' ? '/brand/wss-it-logo-web.png' : '/brand/wss-it-logo-on-light-web.png')
+</script>
+
 <template>
-  <span class="brand" aria-label="WSS IT">
-    <span class="brand__mark" aria-hidden="true">W</span>
-    <span class="brand__name">WSS<span>IT</span></span>
-  </span>
+  <img
+    class="brand"
+    :src="src"
+    alt="WSS IT"
+    width="753"
+    height="160"
+    decoding="async"
+  >
 </template>
 
 <style scoped>
 .brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-  color: var(--color-text-primary);
-  font-weight: 800;
-  letter-spacing: -0.04em;
+  display: block;
+  width: auto;
+  height: 2.5rem;
 }
 
-.brand__mark {
-  display: grid;
-  width: 2rem;
-  height: 2rem;
-  place-items: center;
-  border-radius: 0.6rem;
-  background: var(--gradient-brand);
-  color: white;
-  font-size: 1.05rem;
-  box-shadow: var(--shadow-glow-cyan);
-}
-
-.brand__name {
-  font-size: 1.15rem;
-}
-
-.brand__name span {
-  margin-left: 0.18rem;
-  color: var(--color-accent-cyan);
+@media (max-width: 640px) {
+  .brand {
+    height: 2.125rem;
+  }
 }
 </style>

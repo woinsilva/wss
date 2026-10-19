@@ -34,19 +34,23 @@ function trackChange(to: string) {
 .language-switcher {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
-  color: var(--color-text-muted);
+  gap: 0.15rem;
+  color: var(--color-border-hover);
   font-size: var(--font-size-xs);
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.08em;
 }
 
 .language-switcher a {
-  padding: 0.35rem;
+  padding: 0.4rem;
   color: var(--color-text-muted);
 }
 
+.language-switcher a:hover {
+  color: var(--color-text-primary);
+}
+
 .language-switcher a[aria-current='page'] {
-  color: var(--color-accent-cyan);
+  color: var(--color-text-primary);
 }
 </style>

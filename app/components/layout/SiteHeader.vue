@@ -5,11 +5,12 @@ const scrolled = ref(false)
 
 const links = computed(() => [
   { label: 'nav.services', to: routes.value.services },
+  { label: 'nav.cases', to: `${routes.value.home}#casos` },
   { label: 'nav.about', to: routes.value.about },
 ])
 
 function updateScrolled() {
-  scrolled.value = window.scrollY > 12
+  scrolled.value = window.scrollY > 8
 }
 
 onMounted(() => {
@@ -23,7 +24,7 @@ watch(() => route.fullPath, () => { menuOpen.value = false })
 </script>
 
 <template>
-  <header class="site-header" :class="{ 'site-header--scrolled': scrolled }">
+  <header class="site-header" :class="{ 'site-header--scrolled': scrolled || menuOpen }">
     <div class="container site-header__inner">
       <NuxtLink :to="routes.home" class="site-header__logo">
         <AppLogo />
@@ -45,10 +46,10 @@ watch(() => route.fullPath, () => { menuOpen.value = false })
           type="button"
           :aria-expanded="menuOpen"
           aria-controls="mobile-navigation"
-          :aria-label="menuOpen ? 'Close menu' : 'Open menu'"
+          :aria-label="menuOpen ? $t('nav.closeMenu') : $t('nav.openMenu')"
           @click="menuOpen = !menuOpen"
         >
-          <span /><span /><span />
+          <span :class="{ open: menuOpen }" />
         </button>
       </div>
     </div>
@@ -61,16 +62,30 @@ watch(() => route.fullPath, () => { menuOpen.value = false })
   position: sticky;
   z-index: var(--z-sticky);
   top: 0;
-  height: 4.5rem;
+  height: var(--header-height);
   border-bottom: 1px solid transparent;
-  background: rgba(8, 11, 18, 0.72);
-  backdrop-filter: blur(16px);
-  transition: border-color var(--transition-base), background var(--transition-base);
+  transition: border-color var(--transition-base);
+}
+
+/* The blur lives on a pseudo-element: a backdrop-filter on the header itself would become
+   the containing block of the fixed mobile menu and clip it to the header's height. */
+.site-header::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  content: '';
+  transition: background var(--transition-base);
 }
 
 .site-header--scrolled {
   border-color: var(--color-border);
-  background: rgba(8, 11, 18, 0.94);
+}
+
+.site-header--scrolled::before {
+  background: rgba(255, 255, 255, 0.96);
 }
 
 .site-header__inner,
@@ -83,10 +98,22 @@ watch(() => route.fullPath, () => { menuOpen.value = false })
 .site-header__inner {
   height: 100%;
   justify-content: space-between;
+  gap: var(--space-6);
 }
 
 .site-header__logo {
-  color: inherit;
+  flex-shrink: 0;
+  transform-origin: left center;
+  transition: transform 0.35s var(--ease-out);
+}
+
+/* Slightly smaller logo and a soft shadow once the page scrolls (no layout shift). */
+.site-header--scrolled .site-header__logo {
+  transform: scale(0.9);
+}
+
+.site-header--scrolled {
+  box-shadow: 0 6px 24px -18px rgba(15, 23, 42, 0.35);
 }
 
 .site-header__nav {
@@ -94,39 +121,82 @@ watch(() => route.fullPath, () => { menuOpen.value = false })
 }
 
 .site-header__nav a {
+  position: relative;
+  padding: var(--space-2) 0;
   color: var(--color-text-secondary);
   font-size: var(--font-size-sm);
-  font-weight: 600;
+  font-weight: 500;
+}
+
+.site-header__nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--color-accent);
+  content: '';
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
 }
 
 .site-header__nav a:hover,
-.site-header__nav a.router-link-active {
+.site-header__nav a.router-link-exact-active:not([href*="#"]) {
   color: var(--color-text-primary);
 }
 
+.site-header__nav a:hover::after,
+.site-header__nav a.router-link-exact-active:not([href*="#"])::after {
+  transform: scaleX(1);
+}
+
 .site-header__actions {
-  gap: var(--space-4);
+  gap: var(--space-5);
 }
 
 .site-header__menu {
   display: none;
   width: 2.75rem;
   height: 2.75rem;
+  place-items: center;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  background: transparent;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
   cursor: pointer;
 }
 
-.site-header__menu span {
+.site-header__menu span,
+.site-header__menu span::before,
+.site-header__menu span::after {
   display: block;
   width: 1.1rem;
   height: 2px;
-  margin: 4px auto;
+  border-radius: 2px;
   background: currentcolor;
+  transition: transform var(--transition-base), background var(--transition-base);
 }
 
-@media (max-width: 840px) {
+.site-header__menu span {
+  position: relative;
+}
+
+.site-header__menu span::before,
+.site-header__menu span::after {
+  position: absolute;
+  left: 0;
+  content: '';
+}
+
+.site-header__menu span::before { top: -6px; }
+.site-header__menu span::after { top: 6px; }
+
+.site-header__menu span.open { background: transparent; }
+.site-header__menu span.open::before { transform: translateY(6px) rotate(45deg); }
+.site-header__menu span.open::after { transform: translateY(-6px) rotate(-45deg); }
+
+@media (max-width: 880px) {
   .site-header__nav,
   .site-header__cta,
   .site-header__language {
@@ -134,7 +204,7 @@ watch(() => route.fullPath, () => { menuOpen.value = false })
   }
 
   .site-header__menu {
-    display: block;
+    display: grid;
   }
 }
 </style>

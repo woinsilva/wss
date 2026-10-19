@@ -18,4 +18,6 @@ defineProps<{ items: Array<{ label: string, to?: string }> }>()
 .breadcrumbs ol { display: flex; flex-wrap: wrap; gap: var(--space-2); list-style: none; }
 .breadcrumbs li { display: flex; gap: var(--space-2); color: var(--color-text-muted); font-size: var(--font-size-sm); }
 .breadcrumbs a { color: var(--color-text-secondary); }
+.breadcrumbs a:hover { color: var(--color-accent); }
+.breadcrumbs [aria-current] { color: var(--color-text-primary); font-weight: 500; }
 </style>

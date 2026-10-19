@@ -4,14 +4,30 @@ const items = useTranslatedContent<Faq[]>('faq.items')
 </script>
 
 <template>
-  <section class="section"><div class="container faq"><SectionHeading :title="$t('faq.sectionTitle')" /><div><details v-for="item in items" :key="item.question"><summary>{{ item.question }}</summary><p>{{ item.answer }}</p></details></div></div></section>
+  <section class="section">
+    <div class="container faq">
+      <SectionHeading :eyebrow="$t('faq.eyebrow')" :title="$t('faq.sectionTitle')" :description="$t('faq.sectionSubtitle')" />
+      <div class="faq-list">
+        <details v-for="(item, index) in items" :key="item.question" v-reveal="index * 60">
+          <summary>{{ item.question }}</summary>
+          <p>{{ item.answer }}</p>
+        </details>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>
-.faq { display: grid; grid-template-columns: .8fr 1.2fr; gap: var(--space-16); }
-details { border-top: 1px solid var(--color-border); }
-details:last-child { border-bottom: 1px solid var(--color-border); }
-summary { padding: var(--space-5) 2rem var(--space-5) 0; color: var(--color-text-primary); font-weight: 650; cursor: pointer; }
-details p { padding: 0 0 var(--space-5); }
-@media (max-width: 760px) { .faq { grid-template-columns: 1fr; gap: var(--space-4); } }
+.faq {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+  gap: var(--space-16);
+}
+
+@media (max-width: 900px) {
+  .faq {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
 </style>

@@ -1,199 +1,187 @@
 {
   "meta": {
-    "title": "WSS IT — Custom Software, AI & System Integrations",
-    "description": "Custom software development, AI automation, system integrations and backend engineering for businesses. Information technology consulting.",
-    "ogTitle": "WSS IT — Software • AI • Integrations",
-    "ogDescription": "We turn business challenges into software. Custom systems, AI, integrations and software engineering."
+    "title": "WSS IT - Software Engineering, Integrations & Custom Systems",
+    "description": "Software engineering consultancy: custom systems, system and API integrations, backend engineering and legacy modernization. 13+ years in financial and banking systems.",
+    "ogTitle": "WSS IT - Senior software engineering",
+    "ogDescription": "Custom systems, integrations and modernization for companies that need reliable software."
   },
   "nav": {
     "services": "Services",
-    "expertise": "Expertise",
+    "expertise": "Main navigation",
     "about": "About",
     "contact": "Contact",
     "quote": "Request a quote",
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "cases": "Case studies",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "hero": {
-    "headline": "We turn business challenges into software.",
-    "subheadline": "Custom systems, AI automation, integrations and software engineering for companies that need more than off-the-shelf solutions.",
+    "headline": "Custom software and integrations for operations that can’t afford to stop.",
+    "subheadline": "WSS IT designs, builds and modernizes systems for companies that need senior engineering, backed by real-world experience in financial services, banking and U.S. mortgage technology.",
     "cta": "Request a quote",
-    "ctaSecondary": "Explore our services"
+    "ctaSecondary": "Explore services",
+    "eyebrow": "Software engineering consultancy",
+    "profile": {
+      "title": "Technical profile",
+      "status": "Available for new projects",
+      "rows": [
+        {
+          "label": "Domains",
+          "value": "Financial services · Banking · U.S. mortgage"
+        },
+        {
+          "label": "Specialty",
+          "value": "Integrations, backend and legacy systems"
+        },
+        {
+          "label": "Core stack",
+          "value": "TypeScript · Node.js · Vue · Java · MongoDB · AWS"
+        },
+        {
+          "label": "Environments",
+          "value": "Linux · Windows · AWS · Azure · Docker"
+        },
+        {
+          "label": "Engagement",
+          "value": "Brazil & U.S. · remote · EN / PT"
+        }
+      ]
+    }
   },
   "services": {
-    "sectionTitle": "What can we build for you?",
-    "sectionSubtitle": "Every project starts with understanding the problem. Technology is the means, not the end.",
+    "sectionTitle": "Engineering for the problems that actually matter.",
+    "sectionSubtitle": "Every engagement starts with the business problem. Technology comes second, and has to pay for itself.",
     "viewAll": "View all services",
     "cta": "Request a quote",
     "items": {
       "websites": {
         "title": "Websites & Landing Pages",
         "context": "I need to present my company, product or service professionally online.",
-        "description": "Institutional websites, landing pages and campaign pages built to convert visitors into business opportunities.",
-        "capabilities": ["Landing pages", "Business websites", "Commercial sites", "Lead capture forms", "Lead generation", "Analytics", "SEO", "Campaign pages"]
+        "description": "Fast, accessible business websites and landing pages built for SEO and campaigns.",
+        "capabilities": [
+          "Landing pages",
+          "Business websites",
+          "Commercial sites",
+          "Lead capture forms",
+          "Lead generation",
+          "Analytics",
+          "SEO",
+          "Campaign pages"
+        ]
       },
       "customSoftware": {
-        "title": "Custom Software",
+        "title": "Custom software",
         "context": "I need a specific system for my business operations.",
-        "description": "Dashboards, platforms, SaaS and internal systems designed to solve real operational problems.",
-        "capabilities": ["Dashboards", "Admin systems", "SaaS", "Portals", "B2B platforms", "Backoffice", "Internal tools", "Operational systems"]
+        "description": "Platforms, portals, dashboards and internal systems designed around how your operation actually works.",
+        "capabilities": [
+          "Dashboards",
+          "Admin systems",
+          "SaaS",
+          "Portals",
+          "B2B platforms",
+          "Backoffice",
+          "Internal tools",
+          "Operational systems"
+        ]
       },
       "aiAutomation": {
         "title": "AI & Automation",
         "context": "My team spends too much time on processes that could be automated.",
-        "description": "Intelligent automation with AI applied to real processes: documents, emails, classification, data extraction and reporting.",
-        "capabilities": ["AI automation", "LLM integration", "AI agents", "Document processing", "Classification", "Data extraction", "Email automation", "Workflows", "Reporting", "AI + system integration"]
+        "description": "AI applied to concrete processes: documents, email, classification, data extraction and reporting.",
+        "capabilities": [
+          "AI automation",
+          "LLM integration",
+          "AI agents",
+          "Document processing",
+          "Classification",
+          "Data extraction",
+          "Email automation",
+          "Workflows",
+          "Reporting",
+          "AI + system integration"
+        ]
       },
       "integration": {
-        "title": "System Integration",
+        "title": "System & API integration",
         "context": "I need different systems to talk to each other.",
-        "description": "Connecting internal systems, third-party APIs, financial platforms and legacy services.",
-        "capabilities": ["REST APIs", "Webhooks", "XML", "JSON", "Third-party APIs", "Legacy systems", "Financial APIs", "Data synchronization"]
+        "description": "Connecting internal systems, third-party APIs, financial platforms and legacy software, traceable and without data loss.",
+        "capabilities": [
+          "REST APIs",
+          "Webhooks",
+          "XML",
+          "JSON",
+          "Third-party APIs",
+          "Legacy systems",
+          "Financial APIs",
+          "Data synchronization"
+        ]
       },
       "backend": {
-        "title": "Backend Engineering",
+        "title": "Backend & architecture",
         "context": "We need a robust, reliable and maintainable backend.",
-        "description": "APIs, async processing, queues and event-driven architectures designed for reliability at scale.",
-        "capabilities": ["Node.js", "TypeScript", "Java", "APIs", "Architecture", "Databases", "Jobs", "Queues", "Event-driven systems"]
+        "description": "APIs, async processing, queues and jobs designed for reliability, observability and long-term evolution.",
+        "capabilities": [
+          "Node.js",
+          "TypeScript",
+          "Java",
+          "APIs",
+          "Architecture",
+          "Databases",
+          "Jobs",
+          "Queues",
+          "Event-driven systems"
+        ]
       },
       "backendRescue": {
-        "title": "Backend Rescue",
-        "context": "There's a critical issue in the system and the root cause is unclear.",
-        "description": "Troubleshooting, debugging and resolution for existing systems — production bugs, performance issues and broken integrations.",
-        "capabilities": ["Troubleshooting", "Production bugs", "Performance", "Debugging", "Broken integrations", "Technical debt", "Architecture", "Observability"]
+        "title": "Modernization & support",
+        "context": "There’s a critical issue in the system and the root cause is unclear.",
+        "description": "Diagnosing production bugs, performance issues and broken integrations, and modernizing legacy systems step by step.",
+        "capabilities": [
+          "Troubleshooting",
+          "Production bugs",
+          "Performance",
+          "Debugging",
+          "Broken integrations",
+          "Technical debt",
+          "Legacy migration",
+          "Observability"
+        ]
       },
       "consulting": {
-        "title": "Technical Consulting",
+        "title": "Technical consulting",
         "context": "We need expert guidance to make safe technical decisions.",
-        "description": "Architecture review, code review, technical planning and systems analysis for more informed decisions.",
-        "capabilities": ["Architecture review", "Code review", "Technical planning", "Modernization", "Debugging", "Performance", "Technology decisions", "Systems analysis"]
+        "description": "Architecture and code reviews, technical planning and a second opinion before major decisions.",
+        "capabilities": [
+          "Architecture review",
+          "Code review",
+          "Technical planning",
+          "Modernization",
+          "Debugging",
+          "Performance",
+          "Technology decisions",
+          "Systems analysis"
+        ]
       }
-    }
-  },
-  "customSoftware": {
-    "sectionTitle": "Software that solves the real problem.",
-    "sectionSubtitle": "When off-the-shelf solutions fall short, we build the technology your business actually needs.",
-    "items": ["Admin systems", "Internal platforms", "SaaS", "Dashboards", "Portals", "Web applications", "B2B platforms", "APIs", "Integrations", "Operational tools"],
-    "cta": "Tell us about your project"
-  },
-  "ai": {
-    "sectionTitle": "AI only creates value when it solves a real problem.",
-    "sectionSubtitle": "Artificial intelligence applied where it actually saves time or improves decisions.",
-    "items": [
-      "LLM integration in existing systems",
-      "AI agents",
-      "Administrative automation",
-      "Document analysis",
-      "Automatic classification",
-      "Structured data extraction",
-      "PDFs and documents",
-      "Email workflows",
-      "Report generation",
-      "AI + API integration",
-      "AI + ERP / CRM",
-      "Information processing",
-      "Repetitive task automation"
-    ]
-  },
-  "tech": {
-    "sectionTitle": "Technical capabilities",
-    "sectionSubtitle": "These are some of the technologies and practices we have used in real projects — not a fixed list. We evaluate and adopt the stack best suited to each project's context, requirements and goals.",
-    "categories": {
-      "backend": {
-        "title": "Backend",
-        "items": ["Node.js", "TypeScript", "Java", "REST APIs", "Async processing", "Event-driven systems"]
-      },
-      "frontend": {
-        "title": "Frontend",
-        "items": ["Vue", "Angular", "JavaScript", "TypeScript"]
-      },
-      "database": {
-        "title": "Database",
-        "items": ["MongoDB", "PostgreSQL", "MySQL"]
-      },
-      "cloud": {
-        "title": "Cloud & Infrastructure",
-        "items": ["AWS", "Azure", "Docker", "CI/CD"]
-      },
-      "integrations": {
-        "title": "Integrations",
-        "items": ["REST", "XML", "JSON", "Webhooks", "Third-party APIs"]
-      },
-      "observability": {
-        "title": "Observability",
-        "items": ["Datadog", "LogRocket"]
-      },
-      "quality": {
-        "title": "Quality",
-        "items": ["Unit testing", "Integration testing", "E2E", "Playwright", "Sonar"]
-      },
-      "architecture": {
-        "title": "Architecture",
-        "items": ["Queues (RabbitMQ, SQS)", "Event-driven architecture", "Background jobs", "Third-party integration", "Resilience", "Retries", "Circuit breaker"]
-      }
-    }
-  },
-  "founder": {
-    "sectionTitle": "Technical expertise behind WSS IT",
-    "name": "Wagner Santos",
-    "role": "Founder / Senior Software Engineer",
-    "bio": "Over 15 years of professional experience in software development.",
-    "areas": ["Enterprise software", "Banking", "Fintech", "Mortgage technology", "Backend engineering", "API integrations", "Complex business workflows", "Systems modernization"],
-    "linkedinCta": "View professional experience",
-    "linkedinUrl": "https://www.linkedin.com/in/wagner-santos-silva-5a70a86a/"
-  },
-  "process": {
-    "sectionTitle": "How we turn a need into a solution.",
-    "steps": [
-      { "number": "01", "title": "Understanding", "description": "We understand the problem, the existing process, constraints and objectives." },
-      { "number": "02", "title": "Planning", "description": "We define architecture, scope and strategy." },
-      { "number": "03", "title": "Development", "description": "Incremental, quality-driven implementation." },
-      { "number": "04", "title": "Validation", "description": "Technical testing and functional validation." },
-      { "number": "05", "title": "Delivery", "description": "Deploy, documentation and ongoing support." }
-    ]
-  },
-  "cases": {
-    "sectionTitle": "Real technical experience",
-    "sectionSubtitle": "Anonymized real-world cases that demonstrate engineering capability.",
-    "items": {
-      "lenderSync": {
-        "title": "Defensive Lender Synchronization",
-        "problem": "A lender integration could return partial XML. If the system simply applied the received data, previously populated fields could be lost.",
-        "solution": "Implemented a defensive synchronization strategy where existing data is preserved when the external payload does not provide a new value.",
-        "technologies": ["Node.js", "TypeScript", "XML", "MISMO", "APIs"]
-      },
-      "mismoConversion": {
-        "title": "MISMO Conversion Layer",
-        "problem": "Need to convert data between external MISMO format and internal application domain model in both directions.",
-        "solution": "Bidirectional conversion layer with mapping, validation, compatibility and interoperability — enabling consistent import and export.",
-        "technologies": ["Node.js", "TypeScript", "XML", "MISMO"]
-      },
-      "resilientIntegration": {
-        "title": "Resilient Third-Party Integration",
-        "problem": "Third-party system integrations were subject to intermittent failures, timeouts and inconsistent responses.",
-        "solution": "Implemented retries with exponential backoff, circuit breaker, structured logging and observability for defensive processing.",
-        "technologies": ["Node.js", "TypeScript", "APIs", "Datadog"]
-      }
-    }
-  },
-  "faq": {
-    "sectionTitle": "Frequently asked questions",
-    "items": [
-      { "question": "Does WSS IT build systems from scratch?", "answer": "Yes. We develop custom systems from a real business need or process. Each project starts by understanding the problem, then moves through planning, development and delivery." },
-      { "question": "Can you integrate systems that already exist?", "answer": "Yes. We connect internal systems, third-party APIs, legacy platforms and external services so data and processes flow automatically and reliably." },
-      { "question": "Do you work with third-party APIs?", "answer": "Yes. We have extensive experience with REST integrations, XML, Webhooks and third-party APIs — including financial, lender and enterprise platform APIs." },
-      { "question": "Can you automate processes with AI?", "answer": "Yes. We apply AI to automate real processes — document analysis, classification, data extraction, email workflows and report generation." },
-      { "question": "Can you take over existing systems?", "answer": "Yes. We provide troubleshooting, debugging, performance analysis, broken integration fixes and legacy system modernization." },
-      { "question": "Can I hire just a technical assessment?", "answer": "Yes. We offer consulting for architecture review, code review, technical planning and systems analysis — without the need to hire a full project." },
-      { "question": "Does WSS IT work with companies outside Brazil?", "answer": "Yes. We serve companies across different industries in Brazil and internationally, adapting technology to each business context and objective." },
-      { "question": "How does the quote process work?", "answer": "You describe the problem, idea or opportunity. We analyze the information, understand the context and return with a tailored technical and commercial proposal." }
-    ]
+    },
+    "eyebrow": "Services",
+    "learnMore": "Learn more"
   },
   "cta": {
-    "headline": "Ready to discuss your project?",
-    "subheadline": "Describe the problem, idea or opportunity. We'll get in touch to understand the next steps.",
-    "button": "Request a quote"
+    "headline": "Let’s talk about your project.",
+    "subheadline": "Describe the problem, idea or opportunity. We’ll reply with clear next steps, no strings attached.",
+    "button": "Request a quote",
+    "eyebrow": "Next step",
+    "emailLabel": "or email"
   },
   "quote": {
+    "formSubmitNotice": "You will be redirected to FormSubmit to complete a security check. Your request will be forwarded to WSS IT by email.",
+    "emailClient": {
+      "intro": "Fill out the form to prepare your request in your email app. Review the message and send it from your app. You can also email wssitconsultoria{'@'}gmail.com directly.",
+      "button": "Prepare quote email",
+      "open": "Open my email app",
+      "prepared": "Request prepared. Open your email app using the button below and complete the send there. You can also email wssitconsultoria{'@'}gmail.com directly."
+    },
     "pageTitle": "Quote",
     "headline": "Tell us about your project.",
     "subheadline": "Describe the problem, idea or opportunity. We'll analyze the information and get in touch to discuss the next steps.",
@@ -254,21 +242,21 @@
       "descriptionMinLength": "Please describe your project with at least 20 characters.",
       "privacyRequired": "You must agree to the Privacy Policy.",
       "turnstileRequired": "Please complete the security verification."
-    }
-  },
-  "about": {
-    "pageTitle": "About WSS IT",
-    "headline": "Technology for real business problems.",
-    "intro": "WSS IT is an information technology consultancy specializing in custom software development, system integrations, AI automation and backend engineering.",
-    "mission": "We focus on understanding the business problem before proposing any technology. Each project starts with understanding the process, constraints and objectives — only then we define the architecture and solution.",
-    "experience": "Founded in 2021, WSS IT is built on over 15 years of professional experience developing software across different industries, operations and business contexts.",
-    "location": "Campo Largo, Paraná, Brazil. Serving companies in Brazil and internationally."
+    },
+    "eyebrow": "Quote",
+    "asideTitle": "What happens next",
+    "asideSteps": [
+      "We review the information you send",
+      "We reach out to understand the details",
+      "We send a technical and commercial proposal"
+    ],
+    "asideEmail": "Prefer email?"
   },
   "footer": {
     "tagline": "Software • AI • Integrations",
     "company": "WSS IT Consultoria em Tecnologia da Informação Ltda.",
     "cnpj": "CNPJ 41.112.274/0001-50",
-    "location": "Campo Largo — Paraná — Brazil",
+    "location": "Campo Largo, Paraná, Brazil",
     "email": "wssitconsultoria{'@'}gmail.com",
     "links": {
       "services": "Services",
@@ -277,7 +265,12 @@
       "privacy": "Privacy",
       "terms": "Terms"
     },
-    "copyright": "© {year} WSS IT. All rights reserved."
+    "copyright": "© {year} WSS IT. All rights reserved.",
+    "description": "Software engineering consultancy: custom systems, integrations, backend and modernization.",
+    "navTitle": "Company",
+    "servicesTitle": "Services",
+    "contactTitle": "Contact",
+    "linkedin": "LinkedIn"
   },
   "notFound": {
     "title": "Page not found",
@@ -302,10 +295,16 @@
       "title": "Custom Software Development",
       "metaDescription": "Custom software development for businesses. Admin systems, SaaS, dashboards, portals and B2B platforms.",
       "headline": "Software built for your actual business process.",
-      "description": "When off-the-shelf solutions limit growth, we build custom systems that adapt to the business — not the other way around.",
+      "description": "When off-the-shelf solutions limit growth, we build custom systems that adapt to the business, not the other way around.",
       "faq": [
-        { "question": "What's the typical timeline for building a system?", "answer": "It depends on complexity. Smaller projects can be delivered in weeks, while more complex systems follow incremental deliveries over months." },
-        { "question": "Can the system integrate with tools we already use?", "answer": "Yes. Systems are designed to integrate with existing APIs, databases and platforms." }
+        {
+          "question": "What's the typical timeline for building a system?",
+          "answer": "It depends on complexity. Smaller projects can be delivered in weeks, while more complex systems follow incremental deliveries over months."
+        },
+        {
+          "question": "Can the system integrate with tools we already use?",
+          "answer": "Yes. Systems are designed to integrate with existing APIs, databases and platforms."
+        }
       ]
     },
     "bespokeSystem": {
@@ -318,13 +317,13 @@
       "title": "Websites & Landing Pages",
       "metaDescription": "Professional landing pages and business websites optimized for conversion, SEO and paid campaigns.",
       "headline": "A digital presence that generates opportunities.",
-      "description": "Business websites and landing pages built with a focus on conversion, performance and SEO — ready for paid campaigns."
+      "description": "Business websites and landing pages built with a focus on conversion, performance and SEO, ready for paid campaigns."
     },
     "integration": {
       "title": "System Integration & API",
       "metaDescription": "System and API integration services. We connect internal systems, third-party APIs and legacy platforms to automate processes.",
       "headline": "We connect systems so your data works together.",
-      "description": "REST APIs, Webhooks, XML, financial APIs and legacy system integrations — with data integrity and traceability."
+      "description": "REST APIs, Webhooks, XML, financial APIs and legacy system integrations, with data integrity and traceability."
     },
     "aiAutomation": {
       "title": "AI Automation & Artificial Intelligence",
@@ -342,19 +341,388 @@
       "title": "Technology Consulting",
       "metaDescription": "Information technology consulting. Architecture review, code review, technical planning and systems analysis.",
       "headline": "Expert guidance for safer technical decisions.",
-      "description": "Architecture review, code review, technical planning, modernization and systems analysis — without the need to hire a full project."
+      "description": "Architecture review, code review, technical planning, modernization and systems analysis, without the need to hire a full project."
     },
     "modernization": {
       "title": "System Modernization",
       "metaDescription": "Legacy system modernization. Migration, refactoring, performance improvement and technology upgrades.",
       "headline": "Your software should solve problems, not create new ones.",
-      "description": "Assessment, refactoring and modernization of existing systems — so the technology keeps up with the business."
+      "description": "Assessment, refactoring and modernization of existing systems, so the technology keeps up with the business."
     },
     "codeReview": {
       "title": "Code Review & Architecture",
       "metaDescription": "Code review and software architecture analysis. Risk identification, technical debt and improvement opportunities.",
       "headline": "A second technical opinion before important decisions.",
-      "description": "Code analysis, architecture review, technical risk assessment and improvement opportunities — for decisions based on technical evidence."
+      "description": "Code analysis, architecture review, technical risk assessment and improvement opportunities, for decisions based on technical evidence."
     }
+  },
+  "proof": {
+    "items": [
+      {
+        "value": "13+",
+        "label": "years building enterprise software"
+      },
+      {
+        "value": "5+",
+        "label": "years in U.S. mortgage technology"
+      },
+      {
+        "value": "6",
+        "label": "industries served, from banking to healthcare, manufacturing and logistics"
+      },
+      {
+        "value": "EN · PT",
+        "label": "communication in English and Portuguese"
+      }
+    ]
+  },
+  "clients": {
+    "title": "Founder’s project experience for",
+    "note": "Projects delivered throughout the founder’s career through technology and consulting firms."
+  },
+  "servicesIndex": {
+    "eyebrow": "Services",
+    "title": "Software engineering services",
+    "lead": "From diagnosis to delivery: pick the starting point closest to your problem. Not sure? Describe the situation and we’ll point you in the right direction."
+  },
+  "serviceDetail": {
+    "capabilitiesTitle": "What’s included",
+    "capabilitiesSubtitle": "The most common deliverables and skills for this kind of project. Final scope is defined around your context.",
+    "startTitle": "How we start",
+    "startSteps": [
+      "Intro call to understand the problem",
+      "Technical analysis and scope proposal",
+      "Incremental delivery with validation"
+    ],
+    "proofTitle": "Why WSS IT",
+    "faqTitle": "Questions about this service"
+  },
+  "process": {
+    "eyebrow": "How we work",
+    "sectionTitle": "A predictable process, from problem to production.",
+    "sectionSubtitle": "Small, frequent deliveries, direct access to the people writing the code, and documented technical decisions.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Discovery",
+        "description": "We map the current process, constraints, risks and expected outcome."
+      },
+      {
+        "number": "02",
+        "title": "Planning",
+        "description": "We define architecture, scope, priorities and a delivery plan."
+      },
+      {
+        "number": "03",
+        "title": "Development",
+        "description": "Incremental implementation with code review and automated tests."
+      },
+      {
+        "number": "04",
+        "title": "Validation",
+        "description": "Technical and functional validation with your team before each release."
+      },
+      {
+        "number": "05",
+        "title": "Delivery & evolution",
+        "description": "Deployment, documentation, monitoring and post-launch support."
+      }
+    ]
+  },
+  "cases": {
+    "eyebrow": "Case studies",
+    "sectionTitle": "Hard problems, solved in production.",
+    "sectionSubtitle": "Engineering challenges from real-world systems, from financial platforms to vehicle tracking.",
+    "contextLabel": "Challenge",
+    "solutionLabel": "Solution",
+    "stackLabel": "Keywords",
+    "items": {
+      "tacweb": {
+        "title": "TacWeb: stabilizing a vehicle tracking platform",
+        "sector": "Vehicle tracking · Sascar",
+        "problem": "TacWeb, Sascar’s vehicle tracking and monitoring system, was weighed down by several legacy systems, a massive database that frequently locked up and inconsistent data, putting the platform’s most important customer, Besalco, at risk.",
+        "solution": "Technical leadership of the project: diagnosing and fixing the database lockups, the legacy system issues and the data inconsistencies, working directly with Besalco’s team in Spanish.",
+        "result": "Platform stabilized and its most important customer retained.",
+        "technologies": [
+          "Technical leadership",
+          "Legacy systems",
+          "Databases",
+          "Data consistency",
+          "Spanish"
+        ]
+      },
+      "mismoConversion": {
+        "title": "Bidirectional MISMO conversion layer",
+        "sector": "Wemlo · Mortgage tech (U.S.)",
+        "problem": "A mortgage loan origination platform needed to import and export loan data in the industry-standard MISMO XML format while preserving its internal model.",
+        "solution": "A bidirectional interoperability layer with mapping, validation and version compatibility, enabling consistent import and export.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "XML",
+          "MISMO"
+        ]
+      },
+      "lenderSync": {
+        "title": "Defensive lender synchronization",
+        "sector": "Wemlo · Mortgage tech (U.S.)",
+        "problem": "Lender integrations could return partial XML. Applying the payload as-is would wipe out fields users had already filled in.",
+        "solution": "A defensive sync strategy that preserves existing data whenever the external payload carries no new value.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "XML",
+          "MISMO",
+          "APIs"
+        ]
+      },
+      "resilientIntegration": {
+        "title": "Resilient third-party integrations",
+        "sector": "Financial services",
+        "problem": "Integrations with external systems suffered from intermittent failures, timeouts and inconsistent responses.",
+        "solution": "Retries with exponential backoff, circuit breakers, background jobs, structured logging and monitoring for dependable processing.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "Agenda Jobs",
+          "Datadog"
+        ]
+      },
+      "securitiesRegistry": {
+        "title": "Fixed-income securities registration",
+        "sector": "Banking · Brazil",
+        "problem": "A financial institution needed to exchange fixed-income securities data with Brazil’s CIP/C3 registration platform.",
+        "solution": "An integration with an XML conversion layer between the registration platform and internal banking systems, using asynchronous messaging.",
+        "technologies": [
+          "Java",
+          "Angular",
+          "XML",
+          "RabbitMQ"
+        ]
+      }
+    },
+    "resultLabel": "Outcome"
+  },
+  "founder": {
+    "eyebrow": "Who’s behind it",
+    "sectionTitle": "Senior engineering, no middlemen.",
+    "name": "Wagner Santos Silva",
+    "role": "Founder · Senior Full Stack Software Engineer",
+    "bio": "13+ years building enterprise software for banks, financial services and mortgage technology. Since 2021, Master Software Engineer on a mortgage Loan Origination System (LOS) for the U.S. market.",
+    "highlights": [
+      "At Wemlo, a U.S. mortgage LOS platform: MISMO XML interoperability layer and Fannie Mae, Freddie Mac and UWM integrations",
+      "Systems for HSBC, Caixa, Banco Votorantim, RCI Banque and Finaxis",
+      "Technical leadership of teams and projects at technology consultancies",
+      "Legacy modernization, such as migrating Philips’ Tasy system to the web"
+    ],
+    "linkedinCta": "View LinkedIn profile",
+    "aboutCta": "See full career history",
+    "linkedinUrl": "https://www.linkedin.com/in/wagner-santos-silva-5a70a86a/"
+  },
+  "tech": {
+    "eyebrow": "Stack",
+    "sectionTitle": "Technologies used in real projects",
+    "sectionSubtitle": "A solid foundation, not a closed list. Each project’s stack is chosen by context and requirements.",
+    "categories": {
+      "languages": {
+        "title": "Languages",
+        "items": [
+          "TypeScript",
+          "JavaScript",
+          "Java",
+          "C#",
+          "SQL"
+        ]
+      },
+      "frontend": {
+        "title": "Frontend",
+        "items": [
+          "Vue.js",
+          "Nuxt",
+          "Angular",
+          "HTML5 / CSS3",
+          "JSF",
+          "Dojo"
+        ]
+      },
+      "backend": {
+        "title": "Backend & integration",
+        "items": [
+          "Node.js",
+          "Spring",
+          "REST APIs",
+          "Camunda BPMN",
+          "RabbitMQ",
+          "Redis",
+          "Entity Framework",
+          "NHibernate"
+        ]
+      },
+      "data": {
+        "title": "Data",
+        "items": [
+          "MongoDB",
+          "Aggregation Pipelines",
+          "PostgreSQL",
+          "Oracle",
+          "SQL Server",
+          "Sybase"
+        ]
+      },
+      "cloud": {
+        "title": "Cloud, infrastructure & delivery",
+        "items": [
+          "Linux",
+          "Windows",
+          "AWS",
+          "Azure",
+          "Docker",
+          "Kubernetes",
+          "CI/CD",
+          "GitFlow"
+        ]
+      },
+      "quality": {
+        "title": "Quality & observability",
+        "items": [
+          "SonarQube",
+          "Datadog",
+          "LogRocket",
+          "Prometheus",
+          "Zabbix",
+          "Automated testing",
+          "Code review"
+        ]
+      }
+    },
+    "marqueeTitle": "Technologies we use in production"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "sectionTitle": "Frequently asked questions",
+    "sectionSubtitle": "Didn’t find what you were looking for? Write to wssitconsultoria{'@'}gmail.com.",
+    "items": [
+      {
+        "question": "Does WSS IT build systems from scratch?",
+        "answer": "Yes. We build custom systems from a real business need or process, going through discovery, planning, incremental development and delivery."
+      },
+      {
+        "question": "Can you integrate systems we already use?",
+        "answer": "Yes. Integration is one of our core specialties: internal systems, third-party APIs, financial platforms and legacy software, using REST, XML, webhooks and messaging."
+      },
+      {
+        "question": "Do you take over existing or legacy systems?",
+        "answer": "Yes. We diagnose production bugs, analyze performance, fix broken integrations and modernize step by step, without rewriting everything at once."
+      },
+      {
+        "question": "Can we hire just a technical assessment?",
+        "answer": "Yes. Architecture reviews, code reviews and technical planning are available as standalone engagements, with no full project required."
+      },
+      {
+        "question": "Do you work with companies outside Brazil?",
+        "answer": "Yes. We have ongoing experience with the U.S. market and work remotely in English and Portuguese."
+      },
+      {
+        "question": "How does the quote process work?",
+        "answer": "You describe the problem, idea or opportunity. We review the context, talk through open questions and come back with a technical and commercial proposal."
+      }
+    ]
+  },
+  "about": {
+    "pageTitle": "About",
+    "eyebrow": "About WSS IT",
+    "headline": "A consultancy built on 13+ years of enterprise software engineering.",
+    "intro": "WSS IT is an information technology consultancy specializing in custom software, system integrations, backend engineering and modernization. Founded in 2021 in Campo Largo, Brazil, it serves companies in Brazil and abroad.",
+    "approachTitle": "How we think",
+    "approach": [
+      {
+        "title": "Problem before technology",
+        "description": "We understand the process, constraints and goal before proposing any architecture."
+      },
+      {
+        "title": "Reliability first",
+        "description": "Financial systems teach you that data and integrations can’t fail silently."
+      },
+      {
+        "title": "Direct communication",
+        "description": "You talk to the person who designs and writes the code, in English or Portuguese."
+      }
+    ],
+    "timelineEyebrow": "Career",
+    "timelineTitle": "Founder’s career history",
+    "timelineSubtitle": "Wagner Santos Silva - Senior Full Stack Software Engineer.",
+    "timeline": [
+      {
+        "period": "2021 - present",
+        "company": "Brisance Digital",
+        "role": "Master Software Engineer",
+        "description": "Wemlo, a mortgage Loan Origination System (LOS) for the U.S. market: bidirectional MISMO XML layer, Fannie Mae and Freddie Mac (AUS) integrations, a REST API integration with United Wholesale Mortgage, and MongoDB Aggregation views and reporting, in an AWS environment with Docker, CI/CD, SonarQube, Datadog and LogRocket."
+      },
+      {
+        "period": "2020 - 2021",
+        "company": "Meta",
+        "role": "Team Leader",
+        "description": "Technical lead for TacWeb, Sascar’s vehicle tracking and monitoring system: stabilized legacy systems and a high-volume database, fixed data inconsistencies and worked directly with the platform’s most important customer, Besalco, in Spanish."
+      },
+      {
+        "period": "2018 - 2020",
+        "company": "Autom Tech",
+        "role": "Project Lead",
+        "description": "Banking solutions for RCI Banque (Renault Financial Services) and Finaxis with Java, Spring, Angular, Camunda BPMN and WSO2 API Manager."
+      },
+      {
+        "period": "2018",
+        "company": "Finaxis Brasil",
+        "role": "Software Developer",
+        "description": "Integration with Brazil’s CIP/C3 securities registration platform for fixed-income securities, including an XML conversion layer and RabbitMQ messaging."
+      },
+      {
+        "period": "2017 - 2018",
+        "company": "Gateware",
+        "role": "Senior Systems Developer",
+        "description": "Financial systems and integrations for HSBC and Finaxis."
+      },
+      {
+        "period": "2016 - 2017",
+        "company": "BRQ",
+        "role": "Senior Software Developer",
+        "description": "Banking solutions for Caixa Econômica Federal, Banco Votorantim and Finaxis."
+      },
+      {
+        "period": "2016",
+        "company": "AMcom",
+        "role": "Senior Software Developer",
+        "description": "Modernization of Philips’ Tasy hospital management system from desktop to web, and ERP modules for Lorenzetti."
+      },
+      {
+        "period": "2014 - 2015",
+        "company": "IBM",
+        "role": "Systems Specialist",
+        "description": "Banking applications for HSBC, including an investment simulator for Private Banking customers."
+      },
+      {
+        "period": "2012 - 2014",
+        "company": "Experis IT · BRQ",
+        "role": "Programmer Analyst · Software Developer",
+        "description": "Started as an intern at BRQ and grew into a developer of enterprise Java applications for the financial sector."
+      }
+    ],
+    "educationTitle": "Education",
+    "education": [
+      "Technology Degree in Systems Analysis and Development - FACECLA",
+      "Computer Technician - Colégio Cenecista Presidente Kennedy"
+    ],
+    "languagesTitle": "Languages",
+    "languages": [
+      "Portuguese - native",
+      "English - advanced professional",
+      "Spanish - basic"
+    ],
+    "companyTitle": "Company",
+    "location": "Campo Largo, Paraná, Brazil. Remote engagements in Brazil and abroad."
+  },
+  "marquee": {
+    "pause": "Pause animation",
+    "resume": "Resume animation"
   }
 }

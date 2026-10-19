@@ -1,6 +1,8 @@
 import tailwindcss from '@tailwindcss/vite'
 import { services } from './app/data/services'
 
+const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+
 const serviceRoutes = services.flatMap(service => [
   `/servicos/${service.slugs['pt-BR']}`,
   `/en/services/${service.slugs.en}`,
@@ -28,6 +30,7 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: 'cloudflare_pages',
+    cloudflare: { nodeCompat: true },
     prerender: {
       routes: serviceRoutes,
     },
@@ -76,7 +79,7 @@ export default defineNuxtConfig({
     ],
     defaultLocale: 'pt-BR',
     strategy: 'prefix_except_default',
-    baseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://wssit.com.br',
+    baseUrl: siteUrl,
     langDir: 'locales/',
     detectBrowserLanguage: {
       useCookie: true,
@@ -87,7 +90,7 @@ export default defineNuxtConfig({
 
   // Sitemap
   site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://wssit.com.br',
+    url: siteUrl,
   },
 
   sitemap: {
@@ -97,18 +100,21 @@ export default defineNuxtConfig({
   // Runtime config
   runtimeConfig: {
     resendApiKey: '',
-    quoteFromEmail: 'WSS IT <contato@wssit.com.br>',
+    quoteFromEmail: '',
     quoteDestinationEmail: 'wssitconsultoria@gmail.com',
     turnstileSecretKey: '',
     public: {
       turnstileSiteKey: '',
       gaId: '',
-      siteUrl: '',
+      siteUrl,
+      siteIndexable: false,
+      quoteDeliveryMode: 'server',
     },
   },
 
   // App configuration
   app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
@@ -124,6 +130,7 @@ export default defineNuxtConfig({
   // CSS
   css: [
     '@fontsource-variable/inter/index.css',
+    '@fontsource-variable/montserrat/index.css',
     '~/assets/css/main.css',
   ],
 

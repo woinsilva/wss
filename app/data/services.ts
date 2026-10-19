@@ -20,3 +20,17 @@ export const services: ServiceDefinition[] = [
 export function findServiceBySlug(slug: string): ServiceDefinition | undefined {
   return services.find(service => Object.values(service.slugs).includes(slug))
 }
+
+export function serviceByKey(key: string): ServiceDefinition | undefined {
+  return services.find(service => service.key === key)
+}
+
+/** Services highlighted on the home page; `content` points to `services.items.<content>` in i18n. */
+export const featuredServices = [
+  { key: 'custom-software', content: 'customSoftware', icon: 'layers' },
+  { key: 'integration', content: 'integration', icon: 'plug' },
+  { key: 'backend', content: 'backend', icon: 'server' },
+  { key: 'modernization', content: 'backendRescue', icon: 'wrench' },
+  { key: 'ai-automation', content: 'aiAutomation', icon: 'spark' },
+  { key: 'consulting', content: 'consulting', icon: 'compass' },
+] as const
