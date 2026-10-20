@@ -81,8 +81,18 @@ Não coloque valores reais em `.env.example`, no `wrangler.jsonc` ou no reposit�
 
 ## 4. Primeiro deploy e domínio
 
+### Domínio adquirido: configuração em andamento (20/10/2026)
+
+- Domínio registrado na Hostinger: `wssitconsultoria.com.br`.
+- Zona criada no plano Free da mesma conta Cloudflare do Pages.
+- Nameservers salvos na Hostinger: `byron.ns.cloudflare.com` e `pat.ns.cloudflare.com`.
+- Registros `autoconfig` e `autodiscover` importados como DNS only; não há serviço de e-mail do domínio configurado.
+- A Cloudflare ainda aguarda a propagação dos nameservers. O Pages exige a zona ativa antes de associar o domínio principal.
+- Próximo passo: após ativação, adicionar o domínio principal e `www` em Custom domains do projeto `wss-it-teste`, substituindo os apontamentos de estacionamento. Validar HTTPS e atualizar `NUXT_PUBLIC_SITE_URL` e a indexação antes de republicar.
+- Até essa conclusão, o endereço funcional permanece `https://wss-it-teste.pages.dev`; o domínio próprio ainda não foi validado como endereço do site.
+
 1. Dispare o deploy da branch `main` e confirme que o build termina com o diretório `dist`.
-2. Quando um domínio for adquirido, adicione-o em **Custom domains**. Nenhum domínio próprio pertence atualmente a este projeto.
+2. Adicione o domínio adquirido em **Custom domains** depois que a zona estiver ativa na Cloudflare.
 3. Adicione também a variante `www` se for utilizá-la e escolha uma única origem canônica para redirecionamento.
 4. Atualize a lista de hostnames do Turnstile.
 5. Confirme que `NUXT_PUBLIC_SITE_URL` corresponde exatamente ao domínio canônico.
