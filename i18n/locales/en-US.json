@@ -17,10 +17,10 @@
     "closeMenu": "Close menu"
   },
   "hero": {
-    "headline": "Custom software and integrations for operations that can’t afford to stop.",
+    "headline": "*Senior software engineering* for operations that can’t afford to stop.",
     "subheadline": "WSS IT designs, builds and modernizes systems for companies that need senior engineering, backed by real-world experience in financial services, banking and U.S. mortgage technology.",
     "cta": "Request a quote",
-    "ctaSecondary": "Explore services",
+    "ctaSecondary": "Book a call",
     "eyebrow": "Software engineering consultancy",
     "profile": {
       "title": "Technical profile",
@@ -47,10 +47,11 @@
           "value": "Brazil & U.S. · remote · EN / PT"
         }
       ]
-    }
+    },
+    "scheduleSubject": "Book a call with WSS IT"
   },
   "services": {
-    "sectionTitle": "Engineering for the problems that actually matter.",
+    "sectionTitle": "Engineering for the problems that *actually matter.*",
     "sectionSubtitle": "Every engagement starts with the business problem. Technology comes second, and has to pay for itself.",
     "viewAll": "View all services",
     "cta": "Request a quote",
@@ -168,11 +169,12 @@
     "learnMore": "Learn more"
   },
   "cta": {
-    "headline": "Let’s talk about your project.",
+    "headline": "The next step is *a conversation.*",
     "subheadline": "Describe the problem, idea or opportunity. We’ll reply with clear next steps, no strings attached.",
     "button": "Request a quote",
     "eyebrow": "Next step",
-    "emailLabel": "or email"
+    "emailLabel": "or email",
+    "scheduleButton": "Book a call"
   },
   "quote": {
     "formSubmitNotice": "You will be redirected to FormSubmit to complete a security check. Your request will be forwarded to WSS IT by email.",
@@ -377,7 +379,7 @@
     ]
   },
   "clients": {
-    "title": "Founder’s project experience for",
+    "title": "13+ years of engineering on projects for",
     "note": "Projects delivered throughout the founder’s career through technology and consulting firms."
   },
   "servicesIndex": {
@@ -399,39 +401,34 @@
   },
   "process": {
     "eyebrow": "How we work",
-    "sectionTitle": "A predictable process, from problem to production.",
-    "sectionSubtitle": "Small, frequent deliveries, direct access to the people writing the code, and documented technical decisions.",
+    "sectionTitle": "How WSS IT *works.*",
+    "sectionSubtitle": "Four steps, small and frequent deliveries, and direct access to the people writing the code.",
     "steps": [
       {
         "number": "01",
         "title": "Discovery",
-        "description": "We map the current process, constraints, risks and expected outcome."
+        "description": "We talk to the people who live the problem and map the current process, constraints, risks and expected outcome."
       },
       {
         "number": "02",
         "title": "Planning",
-        "description": "We define architecture, scope, priorities and a delivery plan."
+        "description": "We define architecture, scope and priorities, and present a clear delivery plan before any development starts."
       },
       {
         "number": "03",
         "title": "Development",
-        "description": "Incremental implementation with code review and automated tests."
+        "description": "Incremental implementation with code review, automated tests and validation with your team before each release."
       },
       {
         "number": "04",
-        "title": "Validation",
-        "description": "Technical and functional validation with your team before each release."
-      },
-      {
-        "number": "05",
         "title": "Delivery & evolution",
-        "description": "Deployment, documentation, monitoring and post-launch support."
+        "description": "Deployment, documentation and monitoring. Then we keep evolving the system with you, or prepare your team to take over."
       }
     ]
   },
   "cases": {
     "eyebrow": "Case studies",
-    "sectionTitle": "Hard problems, solved in production.",
+    "sectionTitle": "Hard problems, *solved in production.*",
     "sectionSubtitle": "Engineering challenges from real-world systems, from financial platforms to vehicle tracking.",
     "contextLabel": "Challenge",
     "solutionLabel": "Solution",
@@ -449,7 +446,8 @@
           "Databases",
           "Data consistency",
           "Spanish"
-        ]
+        ],
+        "highlight": "Platform’s most important customer retained"
       },
       "mismoConversion": {
         "title": "Bidirectional MISMO conversion layer",
@@ -461,7 +459,8 @@
           "TypeScript",
           "XML",
           "MISMO"
-        ]
+        ],
+        "highlight": "MISMO import and export in both directions"
       },
       "lenderSync": {
         "title": "Defensive lender synchronization",
@@ -474,7 +473,8 @@
           "XML",
           "MISMO",
           "APIs"
-        ]
+        ],
+        "highlight": "User-entered data preserved"
       },
       "resilientIntegration": {
         "title": "Resilient third-party integrations",
@@ -486,7 +486,8 @@
           "TypeScript",
           "Agenda Jobs",
           "Datadog"
-        ]
+        ],
+        "highlight": "Dependable processing despite external failures"
       },
       "securitiesRegistry": {
         "title": "Fixed-income securities registration",
@@ -498,14 +499,16 @@
           "Angular",
           "XML",
           "RabbitMQ"
-        ]
+        ],
+        "highlight": "CIP/C3 data exchange integrated with internal systems"
       }
     },
-    "resultLabel": "Outcome"
+    "resultLabel": "Outcome",
+    "readMore": "See challenge and solution"
   },
   "founder": {
     "eyebrow": "Who’s behind it",
-    "sectionTitle": "Senior engineering, no middlemen.",
+    "sectionTitle": "Senior engineering, *no middlemen.*",
     "name": "Wagner Santos Silva",
     "role": "Founder · Senior Full Stack Software Engineer",
     "bio": "13+ years building enterprise software for banks, financial services and mortgage technology. Since 2021, Master Software Engineer on a mortgage Loan Origination System (LOS) for the U.S. market.",
@@ -599,7 +602,7 @@
   },
   "faq": {
     "eyebrow": "FAQ",
-    "sectionTitle": "Frequently asked questions",
+    "sectionTitle": "Frequently asked *questions*",
     "sectionSubtitle": "Didn’t find what you were looking for? Write to wssitconsultoria{'@'}gmail.com.",
     "items": [
       {
@@ -724,5 +727,121 @@
   "marquee": {
     "pause": "Pause animation",
     "resume": "Resume animation"
+  },
+  "pains": {
+    "eyebrow": "Warning signs",
+    "title": "The costs you’ve *learned to live with.*",
+    "subtitle": "If any of this sounds familiar, there’s a system asking for real engineering, and the cost of waiting only grows.",
+    "items": [
+      {
+        "lead": "Your systems don’t talk to each other,",
+        "text": "so someone copies data from one screen to another every day."
+      },
+      {
+        "lead": "An integration fails silently,",
+        "text": "and you only find out when a customer complains."
+      },
+      {
+        "lead": "Nobody wants to touch the legacy system,",
+        "text": "because the people who understood it have left."
+      },
+      {
+        "lead": "The same bugs keep coming back to production,",
+        "text": "and the root cause is still unknown."
+      },
+      {
+        "lead": "You hired a vendor,",
+        "text": "but no one on your side can assess what was delivered."
+      }
+    ]
+  },
+  "partner": {
+    "eyebrow": "About WSS IT",
+    "statement": "We’re *engineering partners*, not just vendors.",
+    "lead": "We understand the problem before writing code, we say so plainly when something doesn’t make sense, and we only move forward together when the outcome is worth it for your business.",
+    "items": [
+      {
+        "title": "Senior engineering, no middlemen",
+        "text": "You talk directly to the people who design and write the code, in English or Portuguese."
+      },
+      {
+        "title": "Experience with critical systems",
+        "text": "13+ years in banking, financial services and U.S. mortgage technology, where data and integrations can’t fail silently."
+      },
+      {
+        "title": "Technical candor",
+        "text": "If the simplest solution works, we recommend the simplest one. If the project doesn’t make sense, we tell you before we start."
+      }
+    ]
+  },
+  "sectors": {
+    "eyebrow": "Industries",
+    "title": "Industries where we’ve *already delivered.*",
+    "subtitle": "Experience built on real projects throughout the founder’s career. Select an industry to see what was done.",
+    "listLabel": "Industries served",
+    "items": [
+      {
+        "key": "banking",
+        "name": "Banking",
+        "detail": "Systems and integrations for HSBC, Caixa Econômica Federal, Banco Votorantim and RCI Banque (Renault Financial Services), including an investment simulator for HSBC Private Banking clients.",
+        "tags": [
+          "Java",
+          "Spring",
+          "Angular",
+          "Camunda BPMN"
+        ]
+      },
+      {
+        "key": "financial",
+        "name": "Financial services",
+        "detail": "Finaxis integration with the CIP/C3 registration platform for fixed-income securities, with an XML conversion layer and asynchronous messaging, plus resilient third-party integrations.",
+        "tags": [
+          "Java",
+          "RabbitMQ",
+          "Node.js",
+          "Datadog"
+        ]
+      },
+      {
+        "key": "mortgage",
+        "name": "Mortgage tech (U.S.)",
+        "detail": "Since 2021 at Brisance Digital, on Wemlo, a mortgage loan origination platform: a bidirectional MISMO XML layer and integrations with Fannie Mae, Freddie Mac and United Wholesale Mortgage.",
+        "tags": [
+          "Node.js",
+          "TypeScript",
+          "MongoDB",
+          "AWS"
+        ]
+      },
+      {
+        "key": "healthcare",
+        "name": "Healthcare",
+        "detail": "Modernization of the Tasy hospital system (Philips), moving the application from desktop to the web.",
+        "tags": [
+          "Modernization",
+          "Web",
+          "Legacy systems"
+        ]
+      },
+      {
+        "key": "logistics",
+        "name": "Tracking & logistics",
+        "detail": "Technical leadership of TacWeb, Sascar’s vehicle tracking platform: stabilizing legacy systems and a high-volume database, working directly with Besalco.",
+        "tags": [
+          "Technical leadership",
+          "Databases",
+          "Legacy systems"
+        ]
+      },
+      {
+        "key": "industry",
+        "name": "Manufacturing",
+        "detail": "ERP modules for Lorenzetti.",
+        "tags": [
+          "ERP",
+          "Internal systems"
+        ]
+      }
+    ]
   }
 }

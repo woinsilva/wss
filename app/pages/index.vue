@@ -23,12 +23,14 @@ useHead(() => ({ script: [{ type: 'application/ld+json', innerHTML: JSON.stringi
 <template>
   <div>
     <HeroSection />
-    <ProofBar />
     <ClientsStrip />
+    <PainsSection />
+    <PartnerSection />
     <ServicesOverview />
-    <ProcessSection />
-    <TechMarquee />
     <CaseStudiesSection />
+    <ProcessSection />
+    <SectorsSection />
+    <TechMarquee />
     <FounderSection />
     <FAQSection />
     <CTASection />

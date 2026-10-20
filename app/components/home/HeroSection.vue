@@ -5,7 +5,12 @@ const { locale } = useI18n()
 const { trackCtaClicked } = useAnalytics()
 const rows = useTranslatedContent<ProfileRow[]>('hero.profile.rows')
 const { t } = useI18n()
-const words = computed(() => t('hero.headline').split(' '))
+// Each word keeps its accent flag so the italic highlight survives the word-by-word entrance.
+const words = computed(() => splitAccent(t('hero.headline')).flatMap(part =>
+  part.text.split(' ').filter(Boolean).map(text => ({ text, accent: part.accent })),
+))
+const headline = computed(() => stripAccent(t('hero.headline')))
+const scheduleHref = computed(() => `mailto:wssitconsultoria@gmail.com?subject=${encodeURIComponent(t('hero.scheduleSubject'))}`)
 
 const hero = ref<HTMLElement | null>(null)
 let frame = 0
@@ -45,18 +50,19 @@ onUnmounted(() => {
   <section ref="hero" class="hero">
     <div class="hero__backdrop" aria-hidden="true" />
     <div class="hero__glow" aria-hidden="true" />
+    <div v-parallax="30" class="hero__aura" aria-hidden="true" />
     <div class="container hero__grid">
       <div class="hero__content">
         <p class="eyebrow rise">{{ $t('hero.eyebrow') }}</p>
-        <h1 :aria-label="$t('hero.headline')">
-          <span v-for="(word, index) in words" :key="`${index}-${word}`" class="hero__word rise" aria-hidden="true" :style="{ '--rise-delay': `${120 + index * 45}ms` }">{{ word }}</span>
+        <h1 :aria-label="headline">
+          <span v-for="(word, index) in words" :key="`${index}-${word.text}`" class="hero__word rise" aria-hidden="true" :style="{ '--rise-delay': `${120 + index * 45}ms` }"><em v-if="word.accent">{{ word.text }}</em><template v-else>{{ word.text }}</template></span>
         </h1>
         <p class="lead hero__lead rise" style="--rise-delay: 500ms">{{ $t('hero.subheadline') }}</p>
         <div class="hero__actions rise" style="--rise-delay: 620ms">
           <AppButton :to="routes.quote" size="large" @click="trackCtaClicked('hero', '', locale)">
             {{ $t('hero.cta') }} <span class="btn__arrow" aria-hidden="true">→</span>
           </AppButton>
-          <AppButton :to="routes.services" variant="secondary" size="large">{{ $t('hero.ctaSecondary') }}</AppButton>
+          <a :href="scheduleHref" class="btn btn-secondary btn-lg" @click="trackCtaClicked('hero-schedule', '', locale)">{{ $t('hero.ctaSecondary') }}</a>
         </div>
       </div>
 
@@ -103,7 +109,7 @@ onUnmounted(() => {
   position: absolute;
   z-index: -1;
   inset: 0;
-  background: radial-gradient(36rem circle at var(--mx, 80%) var(--my, 20%), rgba(37, 99, 235, 0.08), transparent 65%);
+  background: radial-gradient(36rem circle at var(--mx, 80%) var(--my, 20%), rgba(37, 99, 235, 0.1), transparent 65%);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.6s ease;
@@ -115,7 +121,20 @@ onUnmounted(() => {
 
 .hero__word {
   display: inline-block;
-  margin-right: 0.24em;
+  margin-right: 0.22em;
+}
+
+/* Brand-blue aura behind the profile card, drifting with the scroll (v-parallax). */
+.hero__aura {
+  position: absolute;
+  z-index: -2;
+  top: -30%;
+  right: -10%;
+  width: 60rem;
+  height: 60rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.32), rgba(124, 58, 237, 0.12) 45%, transparent 70%);
+  pointer-events: none;
 }
 
 .hero__word:last-child {
@@ -233,7 +252,7 @@ onUnmounted(() => {
     z-index: 1;
     border-radius: var(--radius-md);
     background: var(--color-bg-primary);
-    box-shadow: 0 18px 40px -16px rgba(15, 23, 42, 0.28), 0 0 0 1px var(--color-border);
+    box-shadow: var(--glow-accent);
     opacity: 1;
     /* User-initiated; with reduced motion the global rule makes it instant instead of animated. */
     transform: scale(1.06);

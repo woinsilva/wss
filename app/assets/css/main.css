@@ -6,36 +6,39 @@
    ============================================ */
 
 :root {
-  /* Surfaces */
-  --color-bg-primary: #FFFFFF;
-  --color-bg-surface: #F8FAFC;
-  --color-bg-muted: #F1F5F9;
-  --color-bg-elevated: #FFFFFF;
-  --color-navy: #0B1220;
-  --color-navy-soft: #111B2E;
+  color-scheme: dark;
+
+  /* Surfaces: near-black blue base with layered dark cards. */
+  --color-bg-primary: #05070D;
+  --color-bg-surface: #0A0E18;
+  --color-bg-muted: #111726;
+  --color-bg-elevated: #0C111D;
+  --color-navy: #070B16;
+  --color-navy-soft: #0D1324;
 
   /* Text */
-  --color-text-primary: #0B1220;
-  --color-text-secondary: #334155;
-  --color-text-muted: #5B6B82;
-  --color-text-inverse: #FFFFFF;
+  --color-text-primary: #F4F6FB;
+  --color-text-secondary: #C3CAD9;
+  --color-text-muted: #94A0B8;
+  --color-text-inverse: #05070D;
 
-  /* Brand */
-  --color-accent: #2563EB;
-  --color-accent-hover: #1D4ED8;
-  --color-accent-soft: #EFF5FF;
-  --color-accent-line: #BFD3FB;
-  --color-accent-cyan: #0E7490;
+  /* Brand: WSS blue, lifted for contrast on black. */
+  --color-accent: #5B8CFF;
+  --color-accent-hover: #86AAFF;
+  --color-accent-strong: #2563EB;
+  --color-accent-soft: rgba(91, 140, 255, 0.12);
+  --color-accent-line: rgba(91, 140, 255, 0.45);
+  --color-accent-cyan: #38D3F5;
   --gradient-brand: linear-gradient(90deg, #00B4E0, #2563EB 55%, #7C3AED);
 
   /* Lines */
-  --color-border: #E2E8F0;
-  --color-border-hover: #CBD5E1;
+  --color-border: rgba(255, 255, 255, 0.09);
+  --color-border-hover: rgba(255, 255, 255, 0.2);
 
   /* Feedback */
-  --color-danger: #B42318;
-  --color-danger-soft: #FEF3F2;
-  --color-success: #067647;
+  --color-danger: #FF8A80;
+  --color-danger-soft: rgba(255, 138, 128, 0.1);
+  --color-success: #4ADE80;
 
   /* Typography */
   --font-heading: 'Montserrat Variable', 'Montserrat', 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -69,18 +72,19 @@
   /* Radius */
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.25rem;
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
-  --shadow-md: 0 4px 16px -4px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
-  --shadow-lg: 0 18px 40px -12px rgba(15, 23, 42, 0.16);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 12px 32px -12px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 30px 60px -20px rgba(0, 0, 0, 0.85);
+  --glow-accent: 0 0 0 1px rgba(91, 140, 255, 0.4), 0 20px 50px -18px rgba(37, 99, 235, 0.7);
 
   /* Motion */
   --transition-fast: 150ms ease;
-  --transition-base: 220ms ease;
+  --transition-base: 260ms ease;
   --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
 
   /* Layout */
@@ -93,22 +97,11 @@
   --z-toast: 400;
 }
 
-/* Deep-navy surface: re-maps the semantic tokens so any component inside reads correctly. */
+/* Bluer band used to separate sections on the dark base. */
 .surface-dark {
   --color-bg-primary: var(--color-navy);
   --color-bg-surface: var(--color-navy-soft);
-  --color-bg-muted: #16223A;
-  --color-bg-elevated: #131E33;
-  --color-text-primary: #F8FAFC;
-  --color-text-secondary: #CBD5E1;
-  --color-text-muted: #94A3B8;
-  --color-accent: #5B8CFF;
-  --color-accent-hover: #86AAFF;
-  --color-accent-soft: rgba(91, 140, 255, 0.12);
-  --color-accent-line: rgba(91, 140, 255, 0.4);
-  --color-accent-cyan: #38D3F5;
-  --color-border: rgba(148, 163, 184, 0.18);
-  --color-border-hover: rgba(148, 163, 184, 0.34);
+  --color-bg-elevated: #10182D;
 
   background: var(--color-navy);
   color: var(--color-text-secondary);
@@ -116,6 +109,14 @@
 
 .surface-subtle {
   background: var(--color-bg-surface);
+}
+
+/* Faint grid used behind hero, bands and CTA. */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
 }
 
 /* ---- Base ---- */
@@ -140,20 +141,8 @@ html {
   scroll-padding-top: calc(var(--header-height) + 1rem);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
+/* Motion is part of the brand experience and is intentionally kept with prefers-reduced-motion
+   (softer and shorter, see plugins/motion.ts); nothing flashes, loops fast or blocks content. */
 
 body {
   min-height: 100vh;
@@ -179,7 +168,7 @@ svg {
 }
 
 ::selection {
-  background: rgba(37, 99, 235, 0.18);
+  background: rgba(91, 140, 255, 0.35);
   color: var(--color-text-primary);
 }
 
@@ -193,8 +182,8 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-primary);
 }
 
-h1 { font-size: clamp(2.25rem, 4.6vw, 3.75rem); line-height: 1.08; letter-spacing: -0.035em; }
-h2 { font-size: clamp(1.75rem, 3.2vw, 2.5rem); }
+h1 { font-size: clamp(2.5rem, 5.6vw, 4.5rem); line-height: 1.04; letter-spacing: -0.045em; font-weight: 800; }
+h2 { font-size: clamp(2rem, 3.8vw, 3.25rem); line-height: 1.08; letter-spacing: -0.035em; font-weight: 700; }
 h3 { font-size: var(--font-size-xl); letter-spacing: -0.015em; }
 h4 { font-size: var(--font-size-lg); }
 
@@ -217,6 +206,20 @@ strong {
   font-weight: 600;
 }
 
+/* Accent words in headings (AccentText): brand gradient, no italics. */
+h1 em, h2 em, h3 em {
+  color: var(--color-accent);
+  font-style: normal;
+}
+
+/* Gradient per word so it survives the word-by-word reveal transforms. */
+h1 em, h2 em .word__inner, h3 em .word__inner {
+  background: linear-gradient(90deg, #8DB0FF, #5B8CFF 50%, #A78BFA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 /* ---- Focus ---- */
 :focus-visible {
   outline: 2px solid var(--color-accent);
@@ -231,8 +234,8 @@ strong {
   left: var(--space-4);
   z-index: var(--z-toast);
   padding: var(--space-3) var(--space-6);
-  background: var(--color-accent);
-  color: #fff;
+  background: var(--color-accent-strong);
+  color: #FFFFFF;
   font-weight: 600;
   border-radius: 0 0 var(--radius-md) var(--radius-md);
   transition: top var(--transition-fast);
@@ -311,8 +314,8 @@ a.card {
 
 a.card:hover {
   border-color: var(--color-accent-line);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  box-shadow: var(--glow-accent);
+  transform: translateY(-4px);
 }
 
 /* ---- Buttons ---- */
@@ -341,43 +344,33 @@ a.card:hover {
 }
 
 .btn-primary {
-  background: var(--color-accent);
-  color: #fff;
-  box-shadow: var(--shadow-sm);
+  background: #2563EB;
+  color: #FFFFFF;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08) inset, 0 10px 30px -12px rgba(37, 99, 235, 0.8);
 }
 
 .btn-primary:hover {
-  background: var(--color-accent-hover);
-  color: #fff;
-  box-shadow: 0 8px 20px -8px rgba(37, 99, 235, 0.55);
-  transform: translateY(-1px);
+  background: #3B74F0;
+  color: #FFFFFF;
+  box-shadow: var(--glow-accent);
+  transform: translateY(-2px);
 }
 
 .btn:active {
   transform: translateY(0) scale(0.98);
 }
 
-.surface-dark .btn-primary {
-  background: #2563EB;
-}
-
-.surface-dark .btn-primary:hover {
-  background: #3B74F0;
-}
-
 .btn-secondary {
   border-color: var(--color-border-hover);
-  background: var(--color-bg-elevated);
+  background: rgba(255, 255, 255, 0.03);
   color: var(--color-text-primary);
 }
 
 .btn-secondary:hover {
-  border-color: var(--color-text-primary);
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
   color: var(--color-text-primary);
-}
-
-.surface-dark .btn-secondary {
-  background: transparent;
+  transform: translateY(-2px);
 }
 
 .btn-lg {
@@ -408,7 +401,7 @@ a.card:hover {
   padding: 0.2rem 0.6rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
-  background: var(--color-bg-surface);
+  background: rgba(255, 255, 255, 0.04);
   color: var(--color-text-secondary);
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -438,7 +431,8 @@ a:hover .text-link span[aria-hidden] {
   padding: var(--space-16) 0 var(--space-20);
   border-bottom: 1px solid var(--color-border);
   background:
-    linear-gradient(var(--color-bg-surface), var(--color-bg-surface)) padding-box;
+    radial-gradient(ellipse 60% 90% at 85% 0%, rgba(37, 99, 235, 0.25), transparent 70%),
+    var(--color-bg-primary);
 }
 
 .page-hero h1 {
@@ -527,21 +521,6 @@ a:hover .text-link span[aria-hidden] {
 }
 
 /* ---- Motion ---- */
-/* Classes below are only ever added on the client (see plugins/motion.ts). */
-/* !important: the reveal must win over component transitions; the classes are removed afterwards. */
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition:
-    opacity 0.8s var(--ease-out) var(--reveal-delay, 0ms),
-    transform 0.8s var(--ease-out) var(--reveal-delay, 0ms) !important;
-}
-
-.reveal.revealed {
-  opacity: 1;
-  transform: none;
-}
-
 /* Cursor-following highlight for cards. */
 .spotlight {
   position: relative;
@@ -553,7 +532,7 @@ a:hover .text-link span[aria-hidden] {
   z-index: -1;
   inset: 0;
   border-radius: inherit;
-  background: radial-gradient(22rem circle at var(--spot-x, 50%) var(--spot-y, 50%), rgba(37, 99, 235, 0.07), transparent 60%);
+  background: radial-gradient(22rem circle at var(--spot-x, 50%) var(--spot-y, 50%), rgba(91, 140, 255, 0.12), transparent 60%);
   content: '';
   opacity: 0;
   pointer-events: none;
@@ -613,5 +592,39 @@ a:hover .text-link span[aria-hidden] {
 }
 
 body.nav-open {
+  overflow: hidden;
+}
+
+/* Soft motion level: same entrance, shorter and without blur. */
+@keyframes rise-soft {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise {
+    animation-name: rise-soft;
+    animation-duration: 0.6s;
+  }
+}
+
+/* Lenis smooth scrolling (full motion level only). */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
   overflow: hidden;
 }

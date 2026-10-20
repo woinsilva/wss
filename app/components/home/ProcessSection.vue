@@ -6,12 +6,15 @@ const steps = useTranslatedContent<Step[]>('process.steps')
 <template>
   <section class="section surface-subtle process-section">
     <div class="container">
-      <SectionHeading :eyebrow="$t('process.eyebrow')" :title="$t('process.sectionTitle')" :description="$t('process.sectionSubtitle')" />
+      <SectionHeading :eyebrow="$t('process.eyebrow')" :title="$t('process.sectionTitle')" :description="$t('process.sectionSubtitle')" align="center" />
+      <!-- Sticky cards stack on top of each other while scrolling (pure CSS). -->
       <ol class="process">
-        <li v-for="(step, index) in steps" :key="step.number" v-reveal="index * 100">
-          <span class="process__number">{{ step.number }}</span>
-          <h3>{{ step.title }}</h3>
-          <p>{{ step.description }}</p>
+        <li v-for="(step, index) in steps" :key="step.number" class="process__card" :style="{ '--stack-index': index }">
+          <div class="process__text">
+            <h3>{{ step.title }}</h3>
+            <p class="process__description">{{ step.description }}</p>
+          </div>
+          <span class="process__number" aria-hidden="true">{{ step.number }}</span>
         </li>
       </ol>
     </div>
@@ -26,86 +29,70 @@ const steps = useTranslatedContent<Step[]>('process.steps')
 
 .process {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
   gap: var(--space-6);
+  max-width: 64rem;
+  margin: 0 auto;
   list-style: none;
 }
 
-.process li {
-  position: relative;
-  padding-top: var(--space-8);
+.process__card {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-6) + var(--stack-index) * 1.25rem);
+  display: flex;
+  min-height: 17rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-8);
+  padding: clamp(1.75rem, 4vw, 3rem);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(ellipse 60% 90% at 100% 0%, rgba(37, 99, 235, 0.18), transparent 70%),
+    #0F1526;
+  box-shadow: 0 -20px 50px -30px rgba(0, 0, 0, 0.9);
+  transition: box-shadow var(--transition-base), border-color var(--transition-base);
 }
 
-.process li::before {
-  position: absolute;
-  top: 0.95rem;
-  right: calc(-1 * var(--space-6));
-  left: 0;
-  height: 1px;
-  background: var(--color-border-hover);
-  content: '';
+.process__card:hover {
+  border-color: var(--color-accent-line);
+  box-shadow: 0 -20px 50px -30px rgba(0, 0, 0, 0.9), var(--glow-accent);
 }
 
-.process li:last-child::before {
-  right: 0;
+.process__text {
+  max-width: 34rem;
 }
 
-.process__number {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: grid;
-  width: 2rem;
-  height: 2rem;
-  place-items: center;
-  border: 1px solid var(--color-accent);
-  border-radius: 50%;
-  background: var(--color-bg-surface);
-  color: var(--color-accent);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 600;
+.process__card h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3.4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.05;
 }
 
-.process h3 {
-  margin-top: var(--space-5);
+.process__description {
+  margin-top: var(--space-6);
+  color: var(--color-text-secondary);
   font-size: var(--font-size-lg);
 }
 
-.process p {
-  margin-top: var(--space-2);
-  font-size: var(--font-size-sm);
+.process__number {
+  background: linear-gradient(180deg, #8DB0FF, rgba(91, 140, 255, 0.35));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: var(--font-heading);
+  font-size: clamp(3.5rem, 9vw, 6.5rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.85;
 }
 
-@media (max-width: 960px) {
-  .process {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .process li {
-    padding: 0 0 var(--space-8) var(--space-12);
-  }
-
-  .process li::before {
-    top: 2rem;
-    right: auto;
-    bottom: 0;
-    left: 1rem;
-    width: 1px;
-    height: auto;
-  }
-
-  .process li:last-child {
-    padding-bottom: 0;
-  }
-
-  .process li:last-child::before {
-    display: none;
-  }
-
-  .process h3 {
-    margin-top: 0.2rem;
+@media (max-width: 640px) {
+  .process__card {
+    min-height: 0;
+    flex-direction: column-reverse;
+    gap: var(--space-4);
   }
 }
 </style>

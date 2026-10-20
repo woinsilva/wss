@@ -1,6 +1,6 @@
 <script setup lang="ts">
 /** `light` = for light backgrounds (navy wordmark); `dark` = for dark backgrounds (white wordmark). */
-const props = withDefaults(defineProps<{ variant?: 'light' | 'dark' }>(), { variant: 'light' })
+const props = withDefaults(defineProps<{ variant?: 'light' | 'dark' }>(), { variant: 'dark' })
 const src = computed(() => props.variant === 'dark' ? '/brand/wss-it-logo-web.png' : '/brand/wss-it-logo-on-light-web.png')
 </script>
 

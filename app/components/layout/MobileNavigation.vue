@@ -50,7 +50,7 @@ onUnmounted(() => {
 
 <template>
   <Transition name="menu" :duration="{ enter: 650, leave: 220 }">
-    <div v-if="open" class="mobile-nav" @click.self="emit('close')">
+    <div v-if="open" class="mobile-nav" data-lenis-prevent @click.self="emit('close')">
       <nav ref="panel" class="mobile-nav__panel" aria-label="Mobile">
         <NuxtLink
           v-for="(link, index) in links"

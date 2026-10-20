@@ -46,7 +46,7 @@ const items = marqueeTechnologies.map(label => ({ label, icon: techIcon(label)! 
   align-items: center;
   gap: var(--space-3);
   height: 2.5rem;
-  color: #475569;
+  color: var(--color-text-muted);
   font-family: var(--font-heading);
   font-size: clamp(1rem, 1.6vw, 1.2rem);
   font-weight: 700;

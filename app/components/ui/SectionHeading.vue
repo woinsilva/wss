@@ -12,10 +12,10 @@ withDefaults(defineProps<{
 </script>
 
 <template>
-  <header v-reveal class="section-heading" :class="`section-heading--${align}`">
-    <p v-if="eyebrow" class="eyebrow">{{ eyebrow }}</p>
-    <h2>{{ title }}</h2>
-    <p v-if="description" class="section-heading__description">{{ description }}</p>
+  <header class="section-heading" :class="`section-heading--${align}`">
+    <p v-if="eyebrow" v-reveal class="eyebrow">{{ eyebrow }}</p>
+    <h2 v-reveal-words><AccentText :text="title" /></h2>
+    <p v-if="description" v-reveal="180" class="section-heading__description">{{ description }}</p>
     <slot />
   </header>
 </template>

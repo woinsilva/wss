@@ -108,3 +108,20 @@ test('prepares a localized quote email without claiming delivery', async ({ page
   expect(decodeURIComponent(href!)).toContain('Pessoa de Teste')
   await expect(page.getByRole('heading', { name: 'Recebemos sua solicitação.' })).toBeHidden()
 })
+
+test('shows the hero CTAs and switches the sector detail panel', async ({ page }) => {
+  await page.goto('/')
+  await page.waitForLoadState('networkidle')
+  await expect(page.getByRole('link', { name: /Solicitar orçamento/ }).first()).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Agendar uma conversa' }).first()).toHaveAttribute('href', /^mailto:wssitconsultoria@gmail.com\?subject=/)
+  // The sector block fades in when it scrolls into view.
+  await page.locator('#sector-panel').scrollIntoViewIfNeeded()
+  const panel = page.getByRole('tabpanel')
+  await expect(panel).toContainText('HSBC')
+  await page.getByRole('tab', { name: 'Saúde' }).click()
+  await expect(page.getByRole('tab', { name: 'Saúde' })).toHaveAttribute('aria-selected', 'true')
+  await expect(panel).toContainText('Tasy')
+  await page.keyboard.press('ArrowRight')
+  await expect(page.getByRole('tab', { name: 'Rastreamento & logística' })).toBeFocused()
+  await expect(panel).toContainText('TacWeb')
+})

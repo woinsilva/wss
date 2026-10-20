@@ -101,7 +101,7 @@ useSeoMeta({ title: () => `${t('servicesIndex.title')} - WSS IT`, description: (
 
 .service-row:hover .service-row__arrow {
   border-color: var(--color-accent);
-  background: var(--color-accent);
+  background: var(--color-accent-strong);
   color: #fff;
 }
 

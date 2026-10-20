@@ -17,10 +17,10 @@
     "closeMenu": "Fechar menu"
   },
   "hero": {
-    "headline": "Software sob medida e integrações para operações que não podem parar.",
+    "headline": "*Engenharia de software sênior* para operações que não podem parar.",
     "subheadline": "A WSS IT projeta, desenvolve e moderniza sistemas para empresas que precisam de engenharia sênior, com experiência real em sistemas financeiros, bancários e no mercado hipotecário dos EUA.",
     "cta": "Solicitar orçamento",
-    "ctaSecondary": "Ver serviços",
+    "ctaSecondary": "Agendar uma conversa",
     "eyebrow": "Consultoria em engenharia de software",
     "profile": {
       "title": "Perfil técnico",
@@ -47,10 +47,11 @@
           "value": "Brasil e EUA · remoto · PT / EN"
         }
       ]
-    }
+    },
+    "scheduleSubject": "Agendar uma conversa com a WSS IT"
   },
   "services": {
-    "sectionTitle": "Engenharia para os problemas que realmente importam.",
+    "sectionTitle": "Engenharia para os problemas que *realmente importam.*",
     "sectionSubtitle": "Cada projeto começa pelo entendimento do problema de negócio. A tecnologia é escolhida depois, e precisa se pagar.",
     "viewAll": "Ver todos os serviços",
     "cta": "Solicitar orçamento",
@@ -168,11 +169,12 @@
     "learnMore": "Saiba mais"
   },
   "cta": {
-    "headline": "Vamos conversar sobre o seu projeto?",
+    "headline": "O próximo passo é *uma conversa.*",
     "subheadline": "Descreva o problema, a ideia ou a oportunidade. Respondemos com os próximos passos, sem compromisso.",
     "button": "Solicitar orçamento",
     "eyebrow": "Próximo passo",
-    "emailLabel": "ou escreva para"
+    "emailLabel": "ou escreva para",
+    "scheduleButton": "Agendar uma conversa"
   },
   "quote": {
     "formSubmitNotice": "Ao enviar, você será direcionado ao FormSubmit para concluir a verificação de segurança. A solicitação será encaminhada ao e-mail da WSS IT.",
@@ -377,7 +379,7 @@
     ]
   },
   "clients": {
-    "title": "Experiência do fundador em projetos para",
+    "title": "13+ anos de engenharia em projetos para",
     "note": "Projetos realizados ao longo da carreira do fundador, por meio de empresas de tecnologia e consultoria."
   },
   "servicesIndex": {
@@ -399,39 +401,34 @@
   },
   "process": {
     "eyebrow": "Como trabalhamos",
-    "sectionTitle": "Um processo previsível, do problema à produção.",
-    "sectionSubtitle": "Entregas pequenas e frequentes, comunicação direta com quem escreve o código e decisões técnicas documentadas.",
+    "sectionTitle": "Como a WSS IT *trabalha.*",
+    "sectionSubtitle": "Quatro etapas, entregas pequenas e frequentes, e comunicação direta com quem escreve o código.",
     "steps": [
       {
         "number": "01",
         "title": "Entendimento",
-        "description": "Mapeamos o processo atual, as restrições, os riscos e o resultado esperado."
+        "description": "Conversamos com quem vive o problema e mapeamos o processo atual, as restrições, os riscos e o resultado esperado."
       },
       {
         "number": "02",
         "title": "Planejamento",
-        "description": "Definimos arquitetura, escopo, prioridades e um plano de entregas."
+        "description": "Definimos arquitetura, escopo e prioridades, e apresentamos um plano de entregas claro antes de qualquer desenvolvimento."
       },
       {
         "number": "03",
         "title": "Desenvolvimento",
-        "description": "Implementação incremental, com code review e testes automatizados."
+        "description": "Implementação incremental, com code review, testes automatizados e validação com o seu time antes de cada entrega."
       },
       {
         "number": "04",
-        "title": "Validação",
-        "description": "Validação técnica e funcional com o seu time antes de cada entrega."
-      },
-      {
-        "number": "05",
         "title": "Entrega & evolução",
-        "description": "Deploy, documentação, monitoramento e acompanhamento pós-entrega."
+        "description": "Deploy, documentação e monitoramento. Depois, seguimos evoluindo o sistema com você ou preparamos o seu time para assumir."
       }
     ]
   },
   "cases": {
     "eyebrow": "Casos reais",
-    "sectionTitle": "Problemas difíceis, resolvidos em produção.",
+    "sectionTitle": "Problemas difíceis, *resolvidos em produção.*",
     "sectionSubtitle": "Desafios de engenharia enfrentados em sistemas reais, de plataformas financeiras a rastreamento veicular.",
     "contextLabel": "Desafio",
     "solutionLabel": "Solução",
@@ -449,7 +446,8 @@
           "Banco de dados",
           "Consistência de dados",
           "Espanhol"
-        ]
+        ],
+        "highlight": "Principal cliente da plataforma mantido"
       },
       "mismoConversion": {
         "title": "Camada de conversão MISMO bidirecional",
@@ -461,7 +459,8 @@
           "TypeScript",
           "XML",
           "MISMO"
-        ]
+        ],
+        "highlight": "Importação e exportação MISMO nos dois sentidos"
       },
       "lenderSync": {
         "title": "Sincronização defensiva com lenders",
@@ -474,7 +473,8 @@
           "XML",
           "MISMO",
           "APIs"
-        ]
+        ],
+        "highlight": "Dados preenchidos pelos usuários preservados"
       },
       "resilientIntegration": {
         "title": "Integrações resilientes com terceiros",
@@ -486,7 +486,8 @@
           "TypeScript",
           "Agenda Jobs",
           "Datadog"
-        ]
+        ],
+        "highlight": "Processamento confiável mesmo com falhas externas"
       },
       "securitiesRegistry": {
         "title": "Registro de títulos de renda fixa",
@@ -498,14 +499,16 @@
           "Angular",
           "XML",
           "RabbitMQ"
-        ]
+        ],
+        "highlight": "Troca de dados com a CIP/C3 integrada aos sistemas internos"
       }
     },
-    "resultLabel": "Resultado"
+    "resultLabel": "Resultado",
+    "readMore": "Ver desafio e solução"
   },
   "founder": {
     "eyebrow": "Quem está por trás",
-    "sectionTitle": "Engenharia sênior, sem intermediários.",
+    "sectionTitle": "Engenharia sênior, *sem intermediários.*",
     "name": "Wagner Santos Silva",
     "role": "Fundador · Senior Full Stack Software Engineer",
     "bio": "Mais de 13 anos desenvolvendo software enterprise para bancos, serviços financeiros e tecnologia hipotecária. Desde 2021 atua como Master Software Engineer em uma plataforma de originação de crédito imobiliário (LOS) para o mercado dos EUA.",
@@ -599,7 +602,7 @@
   },
   "faq": {
     "eyebrow": "FAQ",
-    "sectionTitle": "Perguntas frequentes",
+    "sectionTitle": "Perguntas *frequentes*",
     "sectionSubtitle": "Não encontrou o que procurava? Escreva para wssitconsultoria{'@'}gmail.com.",
     "items": [
       {
@@ -724,5 +727,121 @@
   "marquee": {
     "pause": "Pausar animação",
     "resume": "Retomar animação"
+  },
+  "pains": {
+    "eyebrow": "Sinais de alerta",
+    "title": "Os custos com que você *aprendeu a conviver.*",
+    "subtitle": "Se algo disso parece familiar, existe um sistema pedindo engenharia de verdade, e o custo de esperar só aumenta.",
+    "items": [
+      {
+        "lead": "Seus sistemas não conversam entre si,",
+        "text": "e alguém copia dados de uma tela para outra todos os dias."
+      },
+      {
+        "lead": "Uma integração falha em silêncio,",
+        "text": "e o problema só aparece quando o cliente reclama."
+      },
+      {
+        "lead": "Ninguém quer tocar no sistema legado,",
+        "text": "porque quem entendia dele já não está mais na empresa."
+      },
+      {
+        "lead": "Os mesmos bugs voltam para produção,",
+        "text": "e a causa raiz continua desconhecida."
+      },
+      {
+        "lead": "Você contratou um fornecedor,",
+        "text": "mas ninguém do seu lado consegue avaliar o que foi entregue."
+      }
+    ]
+  },
+  "partner": {
+    "eyebrow": "Sobre a WSS IT",
+    "statement": "Somos *parceiros de engenharia*, não só fornecedores.",
+    "lead": "Entendemos o problema antes de escrever código, dizemos com franqueza quando algo não faz sentido e só seguimos juntos quando o resultado vale para o seu negócio.",
+    "items": [
+      {
+        "title": "Engenharia sênior, sem intermediários",
+        "text": "Você conversa com quem projeta e escreve o código, em português ou inglês."
+      },
+      {
+        "title": "Experiência em sistemas críticos",
+        "text": "13+ anos em bancos, serviços financeiros e tecnologia hipotecária dos EUA, onde dados e integrações não podem falhar em silêncio."
+      },
+      {
+        "title": "Franqueza técnica",
+        "text": "Se a solução mais simples resolve, recomendamos a mais simples. Se o projeto não faz sentido, dizemos antes de começar."
+      }
+    ]
+  },
+  "sectors": {
+    "eyebrow": "Setores",
+    "title": "Setores em que *já entregamos.*",
+    "subtitle": "Experiência construída em projetos reais ao longo da carreira do fundador. Selecione um setor para ver o que foi feito.",
+    "listLabel": "Setores atendidos",
+    "items": [
+      {
+        "key": "banking",
+        "name": "Bancos",
+        "detail": "Sistemas e integrações para HSBC, Caixa Econômica Federal, Banco Votorantim e RCI Banque (Renault Financial Services), incluindo um simulador de investimentos para clientes Private Banking do HSBC.",
+        "tags": [
+          "Java",
+          "Spring",
+          "Angular",
+          "Camunda BPMN"
+        ]
+      },
+      {
+        "key": "financial",
+        "name": "Serviços financeiros",
+        "detail": "Integração da Finaxis com a plataforma de registro CIP/C3 para títulos de renda fixa, com camada de conversão XML e mensageria assíncrona, além de integrações resilientes com terceiros.",
+        "tags": [
+          "Java",
+          "RabbitMQ",
+          "Node.js",
+          "Datadog"
+        ]
+      },
+      {
+        "key": "mortgage",
+        "name": "Tecnologia hipotecária (EUA)",
+        "detail": "Desde 2021 na Brisance Digital, no Wemlo, plataforma de originação de crédito imobiliário: camada MISMO XML bidirecional e integrações com Fannie Mae, Freddie Mac e United Wholesale Mortgage.",
+        "tags": [
+          "Node.js",
+          "TypeScript",
+          "MongoDB",
+          "AWS"
+        ]
+      },
+      {
+        "key": "healthcare",
+        "name": "Saúde",
+        "detail": "Modernização do sistema hospitalar Tasy (Philips), levando a aplicação de desktop para a web.",
+        "tags": [
+          "Modernização",
+          "Web",
+          "Sistemas legados"
+        ]
+      },
+      {
+        "key": "logistics",
+        "name": "Rastreamento & logística",
+        "detail": "Liderança técnica do TacWeb, plataforma de rastreamento veicular da Sascar: estabilização de sistemas legados e de uma base de dados de grande volume, com atendimento direto à Besalco.",
+        "tags": [
+          "Liderança técnica",
+          "Banco de dados",
+          "Sistemas legados"
+        ]
+      },
+      {
+        "key": "industry",
+        "name": "Indústria",
+        "detail": "Módulos de ERP para a Lorenzetti.",
+        "tags": [
+          "ERP",
+          "Sistemas internos"
+        ]
+      }
+    ]
   }
 }
