@@ -4,9 +4,9 @@ Este projeto usa o preset `cloudflare-pages` do Nitro e gera um diretório `dist
 
 Referências oficiais: [Nuxt no Cloudflare Pages](https://developers.cloudflare.com/pages/framework-guides/deploy-a-nuxt-site/) e [configuração do Wrangler](https://developers.cloudflare.com/workers/wrangler/configuration/).
 
-## Versão de teste sem domínio próprio
+## Publicação no domínio próprio
 
-O projeto Pages é `wss-it-teste`, na conta da empresa. Endereço: `https://wss-it-teste.pages.dev`.
+O projeto Pages é `wss-it-teste`, na conta da empresa. Endereço oficial: `https://wssitconsultoria.com.br`. A variante `www.wssitconsultoria.com.br` também está associada ao Pages.
 
 Para republicar pelo PowerShell, com o Wrangler autorizado:
 
@@ -15,7 +15,7 @@ npm run build:preview
 npx wrangler pages deploy dist --project-name wss-it-teste --branch main --commit-dirty=true
 ```
 
-O build de teste usa as variáveis públicas do `wrangler.jsonc`, mantendo canonical, Open Graph e dados estruturados no endereço correto. `NUXT_PUBLIC_SITE_INDEXABLE=false` impede a indexação da versão de teste por buscadores cooperantes; o endereço continua publicamente acessível.
+O build usa as variáveis públicas do `wrangler.jsonc`, mantendo canonical, Open Graph e dados estruturados no domínio oficial. `NUXT_PUBLIC_SITE_INDEXABLE=true` permite a indexação. Para uma implantação de teste separada, use `false` e configure sua origem canônica.
 
 Nesta versão, `NUXT_PUBLIC_QUOTE_DELIVERY_MODE=formsubmit` valida os campos e encaminha o visitante ao formulário hospedado, que realiza a verificação de segurança e envia o orçamento por e-mail. A caixa da empresa precisa confirmar a ativação do provedor. O modo alternativo `email-client` prepara uma mensagem para envio pelo aplicativo do visitante. O endpoint Resend permanece protegido por Turnstile e só será utilizado no modo `server`.
 
@@ -81,15 +81,15 @@ Não coloque valores reais em `.env.example`, no `wrangler.jsonc` ou no reposit�
 
 ## 4. Primeiro deploy e domínio
 
-### Domínio adquirido: configuração em andamento (20/10/2026)
+### Domínio próprio configurado (20/10/2026)
 
 - Domínio registrado na Hostinger: `wssitconsultoria.com.br`.
 - Zona criada no plano Free da mesma conta Cloudflare do Pages.
 - Nameservers salvos na Hostinger: `byron.ns.cloudflare.com` e `pat.ns.cloudflare.com`.
 - Registros `autoconfig` e `autodiscover` importados como DNS only; não há serviço de e-mail do domínio configurado.
-- A Cloudflare ainda aguarda a propagação dos nameservers. O Pages exige a zona ativa antes de associar o domínio principal.
-- Próximo passo: após ativação, adicionar o domínio principal e `www` em Custom domains do projeto `wss-it-teste`, substituindo os apontamentos de estacionamento. Validar HTTPS e atualizar `NUXT_PUBLIC_SITE_URL` e a indexação antes de republicar.
-- Até essa conclusão, o endereço funcional permanece `https://wss-it-teste.pages.dev`; o domínio próprio ainda não foi validado como endereço do site.
+- Nameservers propagados e domínio principal e `www` associados ao projeto Pages; o apontamento de estacionamento foi substituído por CNAME para `wss-it-teste.pages.dev`.
+- HTTPS validado nos dois hostnames com verificação normal do certificado, usando os IPs retornados pelo DNS autoritativo da Cloudflare. HTTP redireciona para HTTPS.
+- Alguns resolvedores ainda podem manter o IP antigo em cache durante a propagação. A origem canônica passa a ser `https://wssitconsultoria.com.br`, com indexação habilitada.
 
 1. Dispare o deploy da branch `main` e confirme que o build termina com o diretório `dist`.
 2. Adicione o domínio adquirido em **Custom domains** depois que a zona estiver ativa na Cloudflare.
